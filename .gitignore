@@ -1,0 +1,6 @@
+kraken/.kraken/
+kraken/node_modules/
+kraken/reports/
+cypress/node_modules/
+cypress/cypress/integration/1-getting-started
+cypress/cypress/integration/2-advanced-examples
