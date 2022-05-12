@@ -1,16 +1,14 @@
 describe("Feature: Opcion Tags", () => {
   beforeEach(() => {
-    cy.log("Given I navigate to admin page");
-    cy.visit("http://localhost:2368/ghost/#/signin");
-    cy.wait(2000);
+    cy.home_ghost3();
   });
 
   it(" Cuando creamos un nuevo tag y no se asigna un nombre al tag entonces no deja guardar el tag y muestra un mensaje de error", () => {
-    cy.access_valid();
+    cy.access_valid_ghost3();
     cy.wait(3000);
 
     cy.log("And I navigate to page tags");
-    cy.visit("http://localhost:2368/ghost/#/tags/");
+    cy.visit("http://localhost:3001/ghost/#/tags/");
     cy.log("And click in button new tag");
     cy.get("#ember64 > span").click();
     cy.wait(2000);
@@ -26,7 +24,7 @@ describe("Feature: Opcion Tags", () => {
     });
 
     cy.wait(2000);
-    cy.close_session();
+    cy.close_session_ghost3();
     cy.wait(2000);
     cy.get(".modal-footer > .gh-btn-red > span").click();
     cy.wait(2000);

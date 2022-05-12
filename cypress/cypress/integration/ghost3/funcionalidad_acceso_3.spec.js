@@ -1,8 +1,6 @@
 describe("Feature: Acceso a la plataforma", () => {
     beforeEach(() => {
-      cy.log("Given I navigate to admin page");
-      cy.visit("http://localhost:2368/ghost/#/signin");
-      cy.wait(2000);
+      cy.home_ghost3();
     });
   
     it(" Como usuario no registrado quiero recuperar una contraseña entonces retorne mensaje usuario no existe", () => {

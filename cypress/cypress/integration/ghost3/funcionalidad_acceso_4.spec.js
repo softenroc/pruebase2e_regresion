@@ -1,13 +1,11 @@
 describe("Feature: Acceso a la plataforma", () => {
     beforeEach(() => {
-      cy.log("Given I navigate to admin page");
-      cy.visit("http://localhost:2368/ghost/#/signin");
-      cy.wait(2000);
+      cy.home_ghost3();
     });
   
     it(" Como usuario registrado ingreso un usuario valido y una contraseña invalida entonces retorne password incorrecto", () => {
       cy.log("When I enter email registry");
-      cy.get('input[id="ember8"]').type("df.rojasr1@uniandes.edu.co");      
+      cy.get('input[id="ember8"]').type("equipo24@mail.com");      
       cy.wait(2000);
       cy.wait(2000);
       cy.log("And I enter bad password");

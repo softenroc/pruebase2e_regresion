@@ -1,16 +1,14 @@
 describe("Feature: Opcion Pages", () => {
     beforeEach(() => {
-      cy.log("Given I navigate to admin page");
-      cy.visit("http://localhost:2368/ghost/#/signin");
-      cy.wait(2000);
+      cy.home_ghost3();
     });
   
     it("Como owner/staff ingreso a Pages , cambio la hora de publicacion de la pagina", () => {
-      cy.access_valid();
+      cy.access_valid_ghost3();
       cy.wait(3000);
   
       cy.log("And I navigate to page pages");
-      cy.visit("http://localhost:2368/ghost/#/pages/");
+      cy.visit("http://localhost:3001/ghost/#/pages/");
       cy.wait(1000);
      
       cy.log("And Click in existed tag");
@@ -35,7 +33,7 @@ describe("Feature: Opcion Pages", () => {
 
       cy.wait(2000);
   
-      cy.close_session();
+      cy.close_session_ghost3();
       cy.wait(2000);
     });
   });

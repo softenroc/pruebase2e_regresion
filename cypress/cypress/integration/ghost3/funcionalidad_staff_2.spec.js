@@ -1,16 +1,14 @@
 describe("Feature: Opcion Staf", () => {
     beforeEach(() => {
-      cy.log("Given I navigate to admin page");
-      cy.visit("http://localhost:2368/ghost/#/signin");
-      cy.wait(2000);
+      cy.home_ghost3();
     });
   
     it(" Como owner ingreso a Staff, link author cambio la informacion de mi website para validar la actualizacion de datos ", () => {
-      cy.access_valid();
+      cy.access_valid_ghost3();
       cy.wait(3000);
      
       cy.log("And I navigate to page staff");
-      cy.visit("http://localhost:2368/ghost/#/staff/");
+      cy.visit("http://localhost:3001/ghost/#/staff/");
       cy.log("And Click en link author into staff users");
       cy.get('#ember69 > .apps-card-app > .apps-card-right > .apps-configured > .gh-badge').click();
       cy.wait(1000);
@@ -27,9 +25,9 @@ describe("Feature: Opcion Staf", () => {
       cy.log("And I click save button");
       cy.get('#ember86 > span').click();
       cy.wait(1000);
-      cy.visit("http://localhost:2368/ghost/#/staff/");
+      cy.visit("http://localhost:3001/ghost/#/staff/");
       cy.wait(1000);
-      cy.visit("http://localhost:2368/ghost/#/staff/ghost");      
+      cy.visit("http://localhost:3001/ghost/#/staff/ghost");      
       cy.log(
         "Then Validate value text having id user-website equals to  http://www.kraken-node.com"
       );
@@ -37,8 +35,8 @@ describe("Feature: Opcion Staf", () => {
       cy.get('input[id="user-website"]').should("have.value", "http://www.kraken-node.com");
       cy.wait(4000);
 
-      cy.visit("http://localhost:2368/ghost/#/staff/");
-      cy.close_session();
+      cy.visit("http://localhost:3001/ghost/#/staff/");
+      cy.close_session_ghost3();
       cy.wait(2000);
     });
   });

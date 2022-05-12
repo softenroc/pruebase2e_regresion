@@ -1,16 +1,14 @@
 describe("Feature: Opcion Staff", () => {
   beforeEach(() => {
-    cy.log("Given I navigate to admin page");
-    cy.visit("http://localhost:2368/ghost/#/signin");
-    cy.wait(2000);
+    cy.home_ghost3();
   });
 
   it("Como owner ingreso a Staff, actualizo el password del owner con menos de 10 caracteres entonces aparece mensaje de alerta y no deja guardar ", () => {
-    cy.access_valid();
+    cy.access_valid_ghost3();
     cy.wait(3000);
 
     cy.log("And I navigate to page staff");
-    cy.visit("http://localhost:2368/ghost/#/staff/");
+    cy.visit("http://localhost:3001/ghost/#/staff/");
     cy.log("And Click en link owner into staff users");
     cy.get(
       "#ember64 > .apps-card-app > .apps-card-right > .apps-configured > .gh-badge"
@@ -60,7 +58,7 @@ describe("Feature: Opcion Staff", () => {
         expect(message).contain( "Password must be at least 10 characters long");
       });
     cy.wait(2000);
-    cy.close_session();    
+    cy.close_session_ghost3();    
     cy.wait(2000);
   });
 });

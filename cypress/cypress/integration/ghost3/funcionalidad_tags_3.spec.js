@@ -1,20 +1,18 @@
 describe("Feature: Opcion Tags", () => {
     beforeEach(() => {
-      cy.log("Given I navigate to admin page");
-      cy.visit("http://localhost:2368/ghost/#/signin");
-      cy.wait(2000);
+      cy.home_ghost3();
     });
   
     it("Cuando abrimos un tag existe y actualizamos el color, entonces se debe guardar la actualizacion", () => {
-      cy.access_valid();
+      cy.access_valid_ghost3();
       cy.wait(3000);
   
       cy.log("And I navigate to page tags");
-      cy.visit("http://localhost:2368/ghost/#/tags/");
+      cy.visit("http://localhost:3001/ghost/#/tags/");
       cy.wait(3000);
 
       cy.log("And I navigate to new tag created");
-      cy.visit("http://localhost:2368/ghost/#/tags/new-tag-with-kraken");              
+      cy.visit("http://localhost:3001/ghost/#/tags/new-tag-with-kraken");              
       cy.wait(2000);
   
   
@@ -35,11 +33,11 @@ describe("Feature: Opcion Tags", () => {
       cy.wait(2000);
   
       cy.log("And I navigate to page tags");
-      cy.visit("http://localhost:2368/ghost/#/tags/");
+      cy.visit("http://localhost:3001/ghost/#/tags/");
       cy.wait(3000);
 
       cy.log("And I navigate to new tag created");
-      cy.visit("http://localhost:2368/ghost/#/tags/new-tag-with-kraken");              
+      cy.visit("http://localhost:3001/ghost/#/tags/new-tag-with-kraken");              
       cy.wait(2000);
   
      
@@ -50,7 +48,7 @@ describe("Feature: Opcion Tags", () => {
        
   
       cy.wait(2000);
-      cy.close_session();
+      cy.close_session_ghost3();
       cy.wait(2000);
     });
   });
