@@ -2,6 +2,7 @@
     "projectId":"ghost",    
     "env": {
         "baseUrl_ghost3": "http://localhost:3001",
+        "baseUrl_ghost4": "http://localhost:3002",
         "user" : "equipo24@mail.com",
         "password": "equipo24equipo24"
      }
