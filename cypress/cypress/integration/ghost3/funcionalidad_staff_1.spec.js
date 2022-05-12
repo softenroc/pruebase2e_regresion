@@ -8,7 +8,7 @@ describe("Feature: Opcion Staf", () => {
     cy.wait(3000);
 
     cy.log("And I navigate to page staff");
-    cy.visit("http://localhost:3001/ghost/#/staff/");
+    cy.visit(Cypress.env('baseUrl_ghost3')+"/ghost/#/staff/");
     cy.log("And Click en link owner into staff users");
     cy.get(
       "#ember64 > .apps-card-app > .apps-card-right > .apps-configured > .gh-badge"
@@ -28,7 +28,7 @@ describe("Feature: Opcion Staf", () => {
     cy.get("#ember76 > span").click();
     cy.wait(2000);
     cy.log("And I navigate to page staff");
-    cy.visit("http://localhost:3001/ghost/#/staff/");
+    cy.visit(Cypress.env('baseUrl_ghost3')+"/ghost/#/staff/");
     cy.wait(1000);
     cy.log("And Click en link owner into staff users");
     cy.get(

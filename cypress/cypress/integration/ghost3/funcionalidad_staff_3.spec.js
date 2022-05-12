@@ -8,7 +8,7 @@ describe("Feature: Opcion Staff", () => {
     cy.wait(3000);
 
     cy.log("And I navigate to page staff");
-    cy.visit("http://localhost:3001/ghost/#/staff/");
+    cy.visit(Cypress.env('baseUrl_ghost3')+"/ghost/#/staff/");
     cy.log("And Click en link owner into staff users");
     cy.get(
       "#ember64 > .apps-card-app > .apps-card-right > .apps-configured > .gh-badge"

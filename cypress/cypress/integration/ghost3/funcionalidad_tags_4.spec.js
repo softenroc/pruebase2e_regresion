@@ -8,11 +8,11 @@ describe("Feature: Opcion Tags", () => {
       cy.wait(3000);
   
       cy.log("And I navigate to page tags");
-      cy.visit("http://localhost:3001/ghost/#/tags/");
+      cy.visit(Cypress.env('baseUrl_ghost3')+"/ghost/#/tags/");
       cy.wait(3000);
 
       cy.log("And I navigate to new tag created");
-      cy.visit("http://localhost:3001/ghost/#/tags/new-tag-with-kraken");              
+      cy.visit(Cypress.env('baseUrl_ghost3')+"/ghost/#/tags/new-tag-with-kraken");              
       cy.wait(2000);
   
       cy.wait(2000);
@@ -26,11 +26,11 @@ describe("Feature: Opcion Tags", () => {
       cy.wait(2000);
     
       cy.log("And I navigate to page tags");
-      cy.visit("http://localhost:3001/ghost/#/tags/");
+      cy.visit(Cypress.env('baseUrl_ghost3')+"/ghost/#/tags/");
       cy.wait(3000);
 
       cy.log("And I navigate to new tag created");
-      cy.visit("http://localhost:3001/ghost/#/tags/new-tag-with-kraken");              
+      cy.visit(Cypress.env('baseUrl_ghost3')+"/ghost/#/tags/new-tag-with-kraken");              
       cy.wait(2000);
   
       cy.log("Validate tag page not found");

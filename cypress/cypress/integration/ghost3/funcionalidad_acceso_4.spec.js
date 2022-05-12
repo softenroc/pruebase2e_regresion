@@ -5,7 +5,7 @@ describe("Feature: Acceso a la plataforma", () => {
   
     it(" Como usuario registrado ingreso un usuario valido y una contraseña invalida entonces retorne password incorrecto", () => {
       cy.log("When I enter email registry");
-      cy.get('input[id="ember8"]').type("equipo24@mail.com");      
+      cy.get('input[id="ember8"]').type(Cypress.env('user'));      
       cy.wait(2000);
       cy.wait(2000);
       cy.log("And I enter bad password");

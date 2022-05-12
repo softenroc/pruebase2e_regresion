@@ -8,7 +8,7 @@ describe("Feature: Opcion Pages", () => {
       cy.wait(3000);
   
       cy.log("And I navigate to page pages");
-      cy.visit("http://localhost:3001/ghost/#/pages/");
+      cy.visit(Cypress.env('baseUrl_ghost3')+"/ghost/#/pages/");
       cy.wait(1000);
      
       cy.log("And Click in existed tag");
