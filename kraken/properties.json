@@ -1,9 +1,9 @@
 {
-  "URL_ADMIN": "http://localhost:2368/ghost/#/signin",
-  "URL_POST": "http://localhost:2368/ghost/#/posts",
-  "URL_STAFF": "http://localhost:2368/ghost/#/staff/",
-  "URL_TAGS": "http://localhost:2368/ghost/#/tags/",  
-  "USERNAME1": "df.rojasr1@uniandes.edu.co",
-  "PASSWORD1": "abcd1234567"
+  "URL_ADMIN": "http://localhost:3002/ghost/#/signin",
+  "URL_POST": "http://localhost:3002/ghost/#/posts",
+  "URL_STAFF": "http://localhost:3002/ghost/#/staff/",
+  "URL_TAGS": "http://localhost:3002/ghost/#/tags/",  
+  "USERNAME1": "equipo24@mail.com",
+  "PASSWORD1": "equipo24equipo24"
 }
 
