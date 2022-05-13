@@ -2,7 +2,7 @@ Feature: Funcionalidad Staf
 
     @user1 @web
     Scenario: Como owner ingreso a Staff, actualizo el password del owner con menos de 10 caracteres entonces aparece mensaje de alerta y no deja guardar
-        Given I navigate to page "<URL_ADMIN>"
+        Given I navigate to page "<URL_ADMIN_GHOST3>"
         And I wait for 1 seconds
         When I enter email "<USERNAME1>"
         And I wait for 1 seconds
@@ -10,7 +10,7 @@ Feature: Funcionalidad Staf
         And I wait for 1 seconds
         And I click on element having id "#ember12"
         And I wait for 2 seconds
-        And I navigate to page "<URL_STAFF>"
+        And I navigate to page "<URL_STAFF_GHOST3>"
         And I wait for 1 seconds
         And Click en link owner into staff users
         And I wait for 2 seconds

@@ -2,7 +2,7 @@ Feature: Funcionalidad Tags
 
     @user1 @web
     Scenario: Cuando abrimos un tag existe y actualizamos el color, entonces se debe guardar la actualizacion
-        Given I navigate to page "<URL_ADMIN>"
+        Given I navigate to page "<URL_ADMIN_GHOST3>"
         And I wait for 2 seconds
         When I enter email "<USERNAME1>"
         And I wait for 2 seconds
@@ -10,7 +10,7 @@ Feature: Funcionalidad Tags
         And I wait for 2 seconds
         And I click on element having id "#ember12"
         And I wait for 2 seconds
-        And I navigate to page "<URL_TAGS>"
+        And I navigate to page "<URL_TAGS_GHOST3>"
         And I wait for 2 seconds
         And I navigate to page "http://localhost:2368/ghost/#/tags/new-tag-with-kraken"
         And I wait for 3 seconds
@@ -18,7 +18,7 @@ Feature: Funcionalidad Tags
         And I wait for 2 seconds
         And I click on element css_element "/html[1]/body[1]/div[2]/div[1]/main[1]/section[1]/form[1]/header[1]/section[1]/button[1]/span[1]"
         And I wait for 2 seconds
-        And I navigate to page "<URL_TAGS>"
+        And I navigate to page "<URL_TAGS_GHOST3>"
         And I wait for 3 seconds
         And I navigate to page "http://localhost:2368/ghost/#/tags/new-tag-with-kraken"
         And I wait for 3 seconds
