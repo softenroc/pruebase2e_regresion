@@ -7,7 +7,7 @@ describe("Feature: Acceso a la plataforma", () => {
     cy.log("When I enter email not registry");
     cy.get('input[id="ember8"]').type("bad@uniandes.edu.co");
     cy.wait(2000);
-    cy.log("And I enter password ");
+    cy.log("And In ghost3 I enter password  ");
     cy.get('input[id="ember10"]').type("313213");
     cy.wait(2000);
     cy.log("And I click on element having id ember12");
