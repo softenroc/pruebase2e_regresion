@@ -6,39 +6,20 @@ describe("Feature: Opcion Pages", () => {
   it("Como owner/staff ingreso a Pages para crear una nueva página", () => {
     cy.access_valid_ghost3();
     cy.wait(3000);
-
-    cy.log("And I navigate to page pages");
-    cy.visit(Cypress.env('baseUrl_ghost3')+"/ghost/#/pages/");
-    cy.wait(1000);
-    cy.log("And click en new page");
-    cy.visit(Cypress.env('baseUrl_ghost3')+"/ghost/#/editor/page");
-
-    cy.log("And I fill title with text Testing with Kraken");
-    cy.wait(1000);
-    cy.get('textarea[class="gh-editor-title ember-text-area gh-input ember-view"]')
-      .clear()
-      .should("be.visible")
-      .type("Testing with Kraken", { force: true })
-      .should("have.value", "Testing with Kraken");
-    cy.wait(2000);
-
-    cy.log("Save");
-    cy.wait(2000);
-    cy.get('button[class="post-settings"]').click();
-    cy.wait(2000);
-
-    cy.log("And I navigate to page pages");
-    cy.visit(Cypress.env('baseUrl_ghost3')+"/ghost/#/pages/");
-    cy.wait(1000);
-    cy.log("And Click in existed tag");
-    cy.get('.gh-list > :nth-child(2)').click();
-    cy.wait(1000);
-    cy.log(
-      "Then Validate title equals to Testing with Kraken"
-    );
-    cy.get('textarea[class="gh-editor-title ember-text-area gh-input ember-view"]').should("have.value", "Testing with Kraken");
-    cy.wait(4000);
-
+    cy.navigate_pages_ghost3();
+    cy.screenshot();
+    cy.click_new_page_ghost3();
+    cy.screenshot();
+    cy.input_text_page_ghost3();
+    cy.screenshot();
+    cy.click_save_page_ghost3();
+    cy.screenshot();
+    cy.navigate_pages_ghost3();
+    cy.screenshot();
+    cy.click_existed_tag_ghost3();
+    cy.screenshot();
+    cy.validate_tittle_page_ghost3();
+    cy.screenshot();
     cy.close_session_ghost3();
     cy.wait(2000);
   });
