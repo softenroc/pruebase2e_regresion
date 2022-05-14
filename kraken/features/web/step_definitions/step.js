@@ -1,5 +1,22 @@
-const { Given, When, Then, Before } = require("@cucumber/cucumber");
+const { Given, When, Then , Before, AfterStep} = require("@cucumber/cucumber");
 const expect = require("chai").expect;
+
+let featureName = "";
+let scenarioName = "";
+
+Before((scenario) => {
+
+  featureName = scenario.gherkinDocument.feature.name.replace(/ /g,"_");  
+  scenarioName = scenario.gherkinDocument.name 
+  console.log("Feature: "+featureName);  
+  console.log("Scenario: "+scenarioName);  
+});
+
+AfterStep(function (world) {
+   
+ this.driver.saveScreenshot("./reports_ghost3/"+ Math.round(+new Date() / 1000) + ".png")
+ console.log("Feature: "+featureName);  
+});
 
 Given("I have {int} cukes in my belly", function (cukes) {
   console.log(`Cukes: ${cukes}`);
@@ -12,8 +29,14 @@ When("I enter email {kraken-string}", async function (email) {
   return await element.setValue(email);
 });
 
-When("I enter password {kraken-string}", async function (password) {
+When("In ghost3 I enter password {kraken-string}", async function (password) {  
   let element = await this.driver.$("#ember10");
+
+  return await element.setValue(password);
+});
+
+When("In ghost4 I enter password {kraken-string}", async function (password) {
+  let element = await this.driver.$("#ember9");
 
   return await element.setValue(password);
 });
