@@ -379,7 +379,7 @@ Cypress.Commands.add("access_valid_ghost3", () => {
   Cypress.Commands.add("click_save_page_ghost3", () => {
     cy.log("Save");
     cy.get('button[class="post-settings"]').click();
-    cy.wait(2000);
+    cy.wait(4000);
   });
 
   Cypress.Commands.add("click_existed_tag_ghost3", () => {
@@ -422,7 +422,7 @@ Cypress.Commands.add("home_ghost4", () => {
 Cypress.Commands.add("navigate_post_ghost4", () => {
   cy.log("And I navigate to page post");
   cy.visit('http://localhost:3002/ghost/#/posts')
-  cy.wait(2000)
+  cy.wait(3000)
 });
 
 
@@ -750,9 +750,17 @@ Cypress.Commands.add("input_text_page_ghost4", () => {
   cy.wait(1000);
 });
 
+Cypress.Commands.add("click_text_page_ghost4", () => {
+  cy.log("And I fill title with text Testing with Kraken");
+  cy.wait(1000);
+  cy.get('div[class="koenig-editor__editor __mobiledoc-editor __has-no-content"]')
+  .click();
+  cy.wait(1000);
+});
+
 Cypress.Commands.add("click_save_page_ghost4", () => {
   cy.log("Save");
-  cy.get('a[href="#/pages/"]').click();
+  cy.visit(Cypress.env('baseUrl_ghost4')+"/ghost/#/pages");
   cy.wait(2000);
 });
 

@@ -13,7 +13,6 @@ describe("Feature: Opcion Pages", () => {
     cy.input_text_page_ghost3();
     cy.screenshot();
     cy.click_save_page_ghost3();
-    cy.screenshot();
     cy.navigate_pages_ghost3();
     cy.screenshot();
     cy.click_existed_tag_ghost3();

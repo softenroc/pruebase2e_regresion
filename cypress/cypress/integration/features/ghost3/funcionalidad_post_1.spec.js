@@ -5,7 +5,6 @@ describe('New Post', () => {
 
     it('Creamos un nuevo post.', () => {
         cy.access_valid_ghost3();
-        cy.screenshot();
         cy.wait(4000)
         cy.navigate_post_ghost3();
         cy.screenshot();

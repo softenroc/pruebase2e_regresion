@@ -7,8 +7,8 @@ describe("Feature: Acceso a la plataforma", () => {
     cy.access_valid_ghost4();
     cy.screenshot();
     cy.wait(3000);
-    cy.close_session_ghost4();
     cy.screenshot();
+    cy.close_session_ghost4();
     cy.wait(2000);
   });
 });

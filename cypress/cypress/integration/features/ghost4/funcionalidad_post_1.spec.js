@@ -17,4 +17,4 @@ describe('New Post', () => {
         cy.enter_save_ghost4('Prueba Post');
         cy.screenshot();
     })
-  })
+  }) 
