@@ -13,15 +13,15 @@
 
 ### Funcionalidades
 
-#### https://github.com/softenroc/pruebase2e/wiki/Funcionalidades
+#### https://github.com/softenroc/pruebase2e_regresion/wiki/Funcionalidades
 
 ### Escenarios
 
-#### https://github.com/softenroc/pruebase2e/wiki/Funcionalidades_y_escenarios
+#### https://github.com/softenroc/pruebase2e_regresion/wiki/Funcionalidades_y_escenarios
 
 ### Pros y contras (kraken-cypress)
 
-#### https://github.com/softenroc/pruebase2e/wiki/Pros_y_Contras
+#### https://github.com/softenroc/pruebase2e_regresion/wiki/Pros_y_Contras
 
 ### Instrucciones
 
