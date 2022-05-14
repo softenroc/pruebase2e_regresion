@@ -7,9 +7,10 @@ let scenarioName = "";
 Before((scenario) => {
 
   featureName = scenario.gherkinDocument.feature.name.replace(/ /g,"_");  
-  scenarioName = scenario.gherkinDocument.name 
+  scenarioName = scenario.gherkinDocument.feature.children
   console.log("Feature: "+featureName);  
-  console.log("Scenario: "+scenarioName);  
+  console.log("Scenario");  
+  console.dir(scenarioName);  
 });
 
 AfterStep(function (world) {
