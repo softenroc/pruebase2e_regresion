@@ -8,8 +8,9 @@ function scenario(feature_id, scenario_id, info) {
   console.log(`Init scenario:  F: ${feature_id} - S: ${scenario_id}`);
   return `<div class=" browser" id="test0">
     <div class=" btitle">
-        <h2>Feature #: ${feature_id}</h2>
-        <h2>Escenario #: ${scenario_id}</h2>
+        <h2>Feature #: xxx</h2>
+        <h2>Escenario #: ${feature_id}</h2>
+        <h2>Step #: ${scenario_id}</h2>
         <p>Data: ${JSON.stringify(info)}</p>
     </div>
     <div class="imgline">
@@ -63,12 +64,13 @@ function createReport(datetime, resInfo) {
             <link href="index.css" type="text/css" rel="stylesheet">
         </head>
         <body>
+          <h1> Equipo 24 Cypress Compare report</h1>
             <h1>Report Before for 
                  <a href="${config.url_before}"> ${config.url_before}</a>
             </h1>
             <h1>Report After for 
             <a href="${config.url_after}"> ${config.url_after}</a>
-       </h1>
+            </h1>
             <p>Executed: ${datetime}</p>
             <div id="visualizer">
               ${bodyReport(resInfo)}
