@@ -1,0 +1,1 @@
+#### Carpeta de resultados. Consta de 3 subcarpetas para las imagenes capturadas de las 2 versiones de ghost y la comparacion de imagenes

@@ -1,7 +1,12 @@
 .kraken/
 node_modules/
-reports/
-results/
+results/compare_cypress/*
+results/ghost3_cypress/*
+results/ghost4_cypress/*
+!results/README.md
+!results/compare_cypress/README.md
+!results/ghost3_cypress/README.md
+!results/ghost4_cypress/README.md
 integration/1-getting-started
 integration/2-advanced-examples
 
