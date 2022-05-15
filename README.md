@@ -1,4 +1,4 @@
-### Pruebas E2E 
+### Pruebas E2E con Regresiones usando ResembleJS
 ####   202212 Equipo24
 
 
@@ -11,17 +11,28 @@
 #####  Juan Jose Ochoa Ortiz (j.ochoao@uniandes.edu.co)
 #####  Dario Fernando Rojas Rosero (df.rojasr1@uniandes.edu.co)
 
+
+------------
+
 ### Funcionalidades
 
 #### https://github.com/softenroc/pruebase2e_regresion/wiki/Funcionalidades
 
-### Escenarios
+### Escenarios totales probados
 
 #### https://github.com/softenroc/pruebase2e_regresion/wiki/Funcionalidades_y_escenarios
 
-### Pros y contras (kraken-cypress)
+
+### Documento detalle de las Funcionalidades tomadas para  regresiones  con resemble
+
+#### https://uniandes-my.sharepoint.com/:x:/g/personal/df_rojasr1_uniandes_edu_co/Eb3LvU9h04pAgHj73KMXFDkBNN6t4TXlJhtaunoX_9zBZA
+
+### Pros y contras: Kraken y Cypress con regresiones visuales usando ResembleJS
 
 #### https://github.com/softenroc/pruebase2e_regresion/wiki/Pros_y_Contras
+
+
+------------
 
 ### Instrucciones
 
