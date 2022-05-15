@@ -3,10 +3,12 @@
   "URL_POST_GHOST3": "http://localhost:3001/ghost/#/posts",
   "URL_STAFF_GHOST3": "http://localhost:3001/ghost/#/staff/",
   "URL_TAGS_GHOST3": "http://localhost:3001/ghost/#/tags/",  
+  "URL_PAGES_GHOST3": "http://localhost:3001/ghost/#/pages/",  
   "URL_ADMIN_GHOST4": "http://localhost:3002/ghost/#/signin",
   "URL_POST_GHOST4": "http://localhost:3002/ghost/#/posts",
   "URL_STAFF_GHOST4": "http://localhost:3002/ghost/#/staff/",
   "URL_TAGS_GHOST4": "http://localhost:3002/ghost/#/tags/",  
+  "URL_PAGES_GHOST4": "http://localhost:3002/ghost/#/pages/",
   "USERNAME1": "equipo24@mail.com",
   "PASSWORD1": "equipo24equipo24"
 }
