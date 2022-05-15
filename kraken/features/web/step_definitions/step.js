@@ -195,9 +195,23 @@ Then("Click in button new tag", async function () {
   return await element.click();
 });
 
+Then("Click in button new tag ghost4", async function () {
+  let element = await this.driver.$(
+    "/html[1]/body[1]/div[2]/div[1]/main[1]/section[1]/div[1]/header[1]/section[1]/a[1]/span[1]"
+  );
+  return await element.click();
+});
+
 Then("Click in button new post", async function () {
   let element = await this.driver.$(
     "/html[1]/body[1]/div[2]/div[1]/main[1]/section[1]/header[1]/section[1]/a[1]/span[1]"
+  );
+  return await element.click();
+});
+
+Then("Click in button new post ghost4", async function () {
+  let element = await this.driver.$(
+    "/html[1]/body[1]/div[2]/div[1]/main[1]/section[1]/div[1]/header[1]/section[1]/a[1]/span[1]"
   );
   return await element.click();
 });
