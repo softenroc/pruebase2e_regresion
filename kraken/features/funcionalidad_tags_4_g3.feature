@@ -12,12 +12,12 @@ Feature: ghost3_F#3 Funcionalidad Tags
         And I wait for 2 seconds
         And I navigate to page "<URL_TAGS_GHOST3>"
         And I wait for 3 seconds
-        And I navigate to page "http://localhost:2368/ghost/#/tags/new-tag-with-kraken"
+        And I navigate to page "<URL_TAGS_GHOST3>/new-tag-with-kraken"
         And I wait for 3 seconds
         And I click on element having id 'button[class="gh-btn gh-btn-red gh-btn-icon mb15"]'
         And I wait for 2 seconds
         And I click on element having id 'button[class="gh-btn gh-btn-red gh-btn-icon ember-view"]'
         Then I wait for 3 seconds
-        And I navigate to page "http://localhost:2368/ghost/#/tags/new-tag-with-kraken"
+        And I navigate to page "<URL_TAGS_GHOST3>/new-tag-with-kraken"
         Then Validate tag page not found 
         Then I wait for 3 seconds

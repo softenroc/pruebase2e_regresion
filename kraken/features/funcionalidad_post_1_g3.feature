@@ -7,7 +7,7 @@ Feature: ghost3_F#4 Funcionalidad Post
         And I wait for 4 seconds
         When I enter email "<USERNAME1>"
         And I wait for 2 seconds
-        And In ghost3 I enter password  "<PASSWORD1>"
+        And In ghost3 I enter password "<PASSWORD1>"
         And I wait for 2 seconds
         And I click on element having id "#ember12"
         And I wait for 2 seconds

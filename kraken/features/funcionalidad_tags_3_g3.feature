@@ -12,7 +12,7 @@ Feature: ghost3_F#3 Funcionalidad Tags
         And I wait for 2 seconds
         And I navigate to page "<URL_TAGS_GHOST3>"
         And I wait for 2 seconds
-        And I navigate to page "http://localhost:2368/ghost/#/tags/new-tag-with-kraken"
+        And I navigate to page "<URL_TAGS_GHOST3>/new-tag-with-kraken"
         And I wait for 3 seconds
         And I fill on element having id 'input[name="accent-color"]' with text "0FE3F1"
         And I wait for 2 seconds
@@ -20,7 +20,7 @@ Feature: ghost3_F#3 Funcionalidad Tags
         And I wait for 2 seconds
         And I navigate to page "<URL_TAGS_GHOST3>"
         And I wait for 3 seconds
-        And I navigate to page "http://localhost:2368/ghost/#/tags/new-tag-with-kraken"
+        And I navigate to page "<URL_TAGS_GHOST3>/new-tag-with-kraken"
         And I wait for 3 seconds
         Then Validate value text having id 'input[name="accent-color"]' equals to "0FE3F1"
         Then I wait for 3 seconds

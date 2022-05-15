@@ -6,7 +6,7 @@ Feature: ghost3_F#1 Acceso a la plataforma
     And I wait for 2 seconds
     When I enter email "<USERNAME1>"
     And I wait for 2 seconds
-    And In ghost3 I enter password  "badpassword"
+    And In ghost3 I enter password "badpassword"
     And I wait for 2 seconds
     And I click on element having id "#ember12"
     And I wait for 2 seconds
