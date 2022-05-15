@@ -8,7 +8,7 @@ function scenario(feature_id, scenario_id, info) {
   console.log(`Init scenario:  F: ${feature_id} - S: ${scenario_id}`);
   return `<div class=" browser" id="test0">
     <div class=" btitle">
-        <h2>Feature #: xxx</h2>
+        <h2>Feature #: ${feature_id}</h2>
         <h2>Escenario #: ${feature_id}</h2>
         <h2>Step #: ${scenario_id}</h2>
         <p>Data: ${JSON.stringify(info)}</p>
