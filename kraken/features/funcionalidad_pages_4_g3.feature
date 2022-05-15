@@ -26,5 +26,5 @@ Feature: ghost3_F#5 Crear una página en modo draft
         And I wait for 4 seconds
         Then I click on element css_element "/html[1]/body[1]/div[2]/div[1]/main[1]/section[1]/header[1]/section[1]/button[1]/*[name()='svg'][1]"
         And I wait for 4 seconds
-        Then Validate value text having id "#url" equals to "www.page-test.com"
+        Then Validate value text having id "#url" equals to "www-page-test-com"
         And I wait for 4 seconds
