@@ -32,7 +32,7 @@
 
 #####  1. Clonar el proyecto: *git clone git@github.com:softenroc/pruebase2e_regresion.git*
 
-[![clone](clone "clone")](https://github.com/softenroc/pruebase2e_regresion/blob/master/wiki/readme/step_1.png "clone")
+[![clone](clone "(https://github.com/softenroc/pruebase2e_regresion/blob/master/wiki/readme/step_1.pn")](https://github.com/softenroc/pruebase2e_regresion/blob/master/wiki/readme/step_1.png "clone")
 
 ### Pasos Cypress
 
