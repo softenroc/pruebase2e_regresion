@@ -1,7 +1,7 @@
-Feature: Funcionalidad Tags
+Feature: ghost3_F#3 Funcionalidad Tags
 
     @user1 @web
-    Scenario: Cuando abrimos un tag existe y actualizamos el color, entonces se debe guardar la actualizacion
+    Scenario: S#3 Cuando abrimos un tag existe y actualizamos el color, entonces se debe guardar la actualizacion
         Given I navigate to page "<URL_ADMIN_GHOST3>"
         And I wait for 2 seconds
         When I enter email "<USERNAME1>"

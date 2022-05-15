@@ -1,7 +1,7 @@
-Feature: Funcionalidad Staf
+Feature: ghost3_F#2 Funcionalidad Staf
 
   @user1 @web
-  Scenario: Como owner ingreso a Staff , link owner y cambio la informacion de mi localizacion para validar la actualizacion de datos
+  Scenario: S#1 Como owner ingreso a Staff , link owner y cambio la informacion de mi localizacion para validar la actualizacion de datos
     Given I navigate to page "<URL_ADMIN_GHOST3>"
     And I wait for 2 seconds
     When I enter email "<USERNAME1>"

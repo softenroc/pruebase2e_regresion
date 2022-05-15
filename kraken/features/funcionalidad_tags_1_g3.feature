@@ -1,7 +1,7 @@
-Feature: Funcionalidad Tags
+Feature: ghost3_F#3 Funcionalidad Tags
 
     @user1 @web
-    Scenario: Cuando creamos un nuevo tag y no se asigna un nombre al tag entonces no deja guardar el tag y muestra un mensaje de error
+    Scenario: S#1 Cuando creamos un nuevo tag y no se asigna un nombre al tag entonces no deja guardar el tag y muestra un mensaje de error
         Given I navigate to page "<URL_ADMIN_GHOST3>"
         And I wait for 2 seconds
         When I enter email "<USERNAME1>"

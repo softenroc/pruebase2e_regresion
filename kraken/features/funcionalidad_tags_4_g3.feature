@@ -1,7 +1,7 @@
-Feature: Funcionalidad Tags
+Feature: ghost3_F#3 Funcionalidad Tags
 
     @user1 @web
-    Scenario: Cuando damos clic en eliminar un tag entonces el tag se elimina del listado de tags existentes
+    Scenario: S#4 Cuando damos clic en eliminar un tag entonces el tag se elimina del listado de tags existentes
         Given I navigate to page "<URL_ADMIN_GHOST3>"
         And I wait for 2 seconds
         When I enter email "<USERNAME1>"

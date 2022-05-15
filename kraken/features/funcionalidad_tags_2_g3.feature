@@ -1,7 +1,7 @@
-Feature: Funcionalidad Tags
+Feature: ghost3_F#3 Funcionalidad Tags
 
     @user1 @web
-    Scenario: Como creamos un nuevo tag diligenciamos los campos obligatorios entonces el tag se crea con exito
+    Scenario: S#2 Como creamos un nuevo tag diligenciamos los campos obligatorios entonces el tag se crea con exito
         Given I navigate to page "<URL_ADMIN_GHOST3>"
         And I wait for 2 seconds
         When I enter email "<USERNAME1>"

@@ -1,8 +1,8 @@
 
-Feature: Funcionalidad Post
+Feature: ghost3_F#4 Funcionalidad Post
 
     @user1 @web
-    Scenario: Como creamos un nuevo post diligenciamos todos los campos y el post se crea con exito
+    Scenario: S#1 Como creamos un nuevo post diligenciamos todos los campos y el post se crea con exito
         Given I navigate to page "<URL_ADMIN_GHOST3>"
         And I wait for 4 seconds
         When I enter email "<USERNAME1>"

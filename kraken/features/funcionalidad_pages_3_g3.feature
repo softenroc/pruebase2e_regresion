@@ -1,7 +1,7 @@
-Feature: Crear una página en modo draft
+Feature: ghost3_F#5 Crear una página en modo draft
 
     @user1 @web
-    Scenario: Como owner/staff ingreso a Pages , cambio la hora de publicacion de la pagina
+    Scenario: S#3 Como owner/staff ingreso a Pages , cambio la hora de publicacion de la pagina
         Given I navigate to page "<URL_ADMIN_GHOST3>"
         And I wait for 1 seconds
         When I enter email "<USERNAME1>"

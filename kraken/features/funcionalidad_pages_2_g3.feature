@@ -1,7 +1,7 @@
-Feature: Crear una página en modo draft
+Feature: ghost3_F#5 Crear una página en modo draft
 
   @user1 @web
-  Scenario: Como owner/staff ingreso a Pages , edito una pagina existente y se actualiza la pagina
+  Scenario: S#2 Como owner/staff ingreso a Pages , edito una pagina existente y se actualiza la pagina
     Given I navigate to page "<URL_ADMIN_GHOST3>"
     And I wait for 1 seconds
     When I enter email "<USERNAME1>"

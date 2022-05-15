@@ -1,7 +1,7 @@
-Feature: Acceso a la plataforma
+Feature: ghost3_F#1 Acceso a la plataforma
 
   @user1 @web
-  Scenario: Como usuario no registrado quiero recuperar una contraseña entonces retorne mensaje usuario no existe
+  Scenario: S#3 Como usuario no registrado quiero recuperar una contraseña entonces retorne mensaje usuario no existe
     Given I navigate to page "<URL_ADMIN_GHOST3>"
     And I wait for 2 seconds
     When I enter email "test@uniandes.edu.co"

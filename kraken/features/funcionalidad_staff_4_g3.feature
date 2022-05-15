@@ -1,7 +1,7 @@
-Feature: Funcionalidad Staf
+Feature: ghost3_F#2 Funcionalidad Staf
 
     @user1 @web
-    Scenario: Como owner ingreso a Staff, actualizo el password del owner con menos de 10 caracteres entonces aparece mensaje de alerta y no deja guardar
+    Scenario: S#4 Como owner ingreso a Staff, actualizo el password del owner con menos de 10 caracteres entonces aparece mensaje de alerta y no deja guardar
         Given I navigate to page "<URL_ADMIN_GHOST3>"
         And I wait for 1 seconds
         When I enter email "<USERNAME1>"

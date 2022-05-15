@@ -1,8 +1,8 @@
 
-Feature: Funcionalidad Post
+Feature: ghost3_F#4 Funcionalidad Post
 
     @user1 @web
-    Scenario: Como Modificamos un post con exito
+    Scenario: S#2 Como Modificamos un post con exito
         Given I navigate to page "<URL_ADMIN_GHOST3>"
         And I wait for 2 seconds
         When I enter email "<USERNAME1>"
