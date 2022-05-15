@@ -101,9 +101,9 @@ password: equipo24equipo24
  5. Ejecutar el comando:` npx kraken-node doctor  ` y validamos ADB y JAVA como [Installed]
  6. Para facilitar la ejecucion de ciertos features en entornos windows/linux/mac, se creo un script en javascript llamado `main_ghost.js` en la carpeta de kraken. Este js se ejecuta con el comando `node main_ghost.js` .
  7. Este despliega un menu de opciones en la consola para:  
- Dehabilitar todo: (cambia las extensiones de los archivos de .feature a .feature_ ) esto para que kraken no los identifique y los ejecute. 
- Habilitar todo :  Revierte el proceso anterior.
- Listado de cada uno de los escenarios de prueba para ghost versiones 3 y 4: Al seleccionar uno de ellos, se habilita para la ejecución.
+-  Dehabilitar todo: (cambia las extensiones de los archivos de .feature a .feature_ ) esto para que kraken no los identifique y los ejecute. 
+-  Habilitar todo :  Revierte el proceso anterior.
+-  Listado de cada uno de los escenarios de prueba para ghost versiones 3 y 4: Al seleccionar uno de ellos, se habilita para la ejecución.
  8. Una vez deshabilitados todos los feature y habilitado el /los que se se desee probar, se  ejecuta el comando : `npx kraken-node run` , para lanzar la prueba. 
  9. Cuando se ejecuta la prueba de un escenario, se toman screenshots despues de cada paso importante y se guardan en la ruta results/ghost[version]_kraken en formato png con la siguiente estructura: ghost[version]_[id funcionalidad]_[id escenario]_[id del paso]. png . Los escenarios que se modificaron para las pruebas de regresión se encuentran en el siguiente documento: 
 [Funcionalidades regresiones semana 6](https://uniandes-my.sharepoint.com/:x:/g/personal/df_rojasr1_uniandes_edu_co/Eb3LvU9h04pAgHj73KMXFDkBNN6t4TXlJhtaunoX_9zBZA?e=27Kgxk "Funcionalidades regresiones semana 6")
