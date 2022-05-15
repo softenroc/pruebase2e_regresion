@@ -1,0 +1,1 @@
+#### Carpeta de pruebas de ghostv4 para la  comparacion de imagenes
