@@ -67,6 +67,10 @@ Password: equipo24equipo24
 
 1. Clonar el proyecto: *git clone git@github.com:softenroc/pruebase2e_regresion.git*
 
+### Instalacion de pruebase2e_regresion
+
+#####  1. Clonar el proyecto: *git clone git@github.com:softenroc/pruebase2e_regresion.git*
+
 ### Pasos Cypress
 
  1. Ingresar a la carpeta de cypress
