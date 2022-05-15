@@ -32,8 +32,6 @@
 
 #####  1. Clonar el proyecto: *git clone git@github.com:softenroc/pruebase2e_regresion.git*
 
-[!clone ](https://github.com/softenroc/pruebase2e_regresion/blob/master/wiki/readme/step_1.png)
-
 ### Pasos Cypress
 
 #####  1. Abrir en una terminal la carptea cypress.
