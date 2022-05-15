@@ -26,7 +26,7 @@ Feature: ghost3_F#3 Funcionalidad Tags
         And I wait for 2 seconds
         And I navigate to page "<URL_TAGS_GHOST3>"
         And I wait for 3 seconds
-        And I navigate to page "<URL_TAGS_GHOST3>/new-tag-with-kraken"
+        And I navigate to page "<URL_TAGS_GHOST3_NEW_TAG>"
         And I wait for 3 seconds
         Then Validate value text having id "#tag-name" equals to "New Tag Test with Kraken"        
         Then I wait for 3 seconds

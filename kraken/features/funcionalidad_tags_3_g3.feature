@@ -6,7 +6,7 @@ Feature: ghost3_F#3 Funcionalidad Tags
         And I wait for 2 seconds
         When I enter email "<USERNAME1>"
         And I wait for 2 seconds
-        And In ghost3 I enter password  "<PASSWORD1>"
+        And In ghost3 I enter password "<PASSWORD1>"
         And I wait for 2 seconds
         And I click on element having id "#ember12"
         And I wait for 2 seconds
