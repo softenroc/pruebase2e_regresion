@@ -112,6 +112,9 @@ Nota: En Windows se genera un error de un path cuando se trata de correr mas de 
 
 ## Pasos para generar reporte HTML con resemble
 
+ 1. Ingresar a la carpeta de resemble
+ 2. Ejecutar el comando: `npm install`
+
 ### Para reporte HTML de pruebas de regresion con Cypress
 
 1. Una vez finalizada la ejecución de los escenarios que se tomaron de prueba (acorde al documento: [Funcionalidades regresiones semana 6](https://uniandes-my.sharepoint.com/:x:/g/personal/df_rojasr1_uniandes_edu_co/Eb3LvU9h04pAgHj73KMXFDkBNN6t4TXlJhtaunoX_9zBZA?e=27Kgxk "Funcionalidades regresiones semana 6")) , se procede a generar el reporte HTML de regresion para las pruebas con Cypress. 
