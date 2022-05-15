@@ -9,4 +9,4 @@ results/ghost4_cypress/*
 !results/ghost4_cypress/README.md
 integration/1-getting-started
 integration/2-advanced-examples
-
+cypress/screenshots/*
