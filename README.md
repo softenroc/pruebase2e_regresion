@@ -28,6 +28,12 @@
 ##### -- Versión de Node: v12.22.1
 ##### -- Versión de Ghost: 3.41.1
 
+### Instalacion de pruebase2e_regresion
+
+#####  1. Clonar el proyecto: *git clone git@github.com:softenroc/pruebase2e_regresion.git*
+
+[![clone](clone "clone")](https://github.com/softenroc/pruebase2e_regresion/blob/master/wiki/readme/step_1.png "clone")
+
 ### Pasos Cypress
 
 #####  1. Abrir en una terminal la carptea cypress.
