@@ -8,19 +8,19 @@ function scenario(feature_id, scenario_id, info) {
   console.log(`Init scenario:  F: ${feature_id} - S: ${scenario_id}`);
   return `<div class=" browser" id="test0">
     <div class=" btitle">
-        <h2>Feature #: ${feature_id}</h2>
-        <h2>Escenario #: ${feature_id}</h2>
-        <h2>Step #: ${scenario_id}</h2>
-        <p>Data: ${JSON.stringify(info)}</p>
+        <h2 style="color:blue; font-size: 20px; font-weight: bold;">Feature #: ${feature_id}</h2>
+        <h2 style="color:blue; font-size: 20px; font-weight: bold;">Escenario #: ${feature_id}</h2>
+        <h2 style="color:blue; font-size: 20px; font-weight: bold;">Step #: ${scenario_id}</h2>
+        <p style="color:green; font-size: 17px; font-weight: bold;">Data: ${JSON.stringify(info)}</p>
     </div>
     <div class="imgline">
       <div class="imgcontainer">
-        <span class="imgname">Reference Ghost v3.41.1</span>
-        <img class="img2" src="../ghost3_cypress/ghost3_${feature_id}_${scenario_id}.png" id="refImage" label="Reference">
+        <span class="imgname">Referencia Ghost v3.41.1</span>
+        <img class="img2" src="../ghost3_cypress/ghost3_${feature_id}_${scenario_id}.png" id="refImage" label="Referencia">
       </div>
       <div class="imgcontainer">
         <span class="imgname">Test Ghost 4.40.0</span>
-        <img class="img2" src="../ghost4_cypress/ghost4_${feature_id}_${scenario_id}.png" id="refImage" label="Reference">
+        <img class="img2" src="../ghost4_cypress/ghost4_${feature_id}_${scenario_id}.png" id="refImage" label="Test">
       </div>
     </div>
     <div class="imgline">
@@ -60,18 +60,18 @@ function createReport(datetime, resInfo) {
   return `
     <html>
         <head>
-            <title> Equipo 24 Cypress Compare report</title>
+            <title>  Equipo 24 Cypress Reporte de Regresiones</title>
             <link href="index.css" type="text/css" rel="stylesheet">
         </head>
-        <body>
-          <h1> Equipo 24 Cypress Compare report</h1>
-            <h1>Report Before for 
+        <body style="color:black; font-size: 20px; font-weight: bold; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+          <h1>  Equipo 24 Cypress Reporte de Regresiones</h1>
+            <h3>URL de Ghost v3 (Version Original): 
                  <a href="${config.url_before}"> ${config.url_before}</a>
-            </h1>
-            <h1>Report After for 
+            </h4>
+            <h3>URL de Ghost v4 (Version posterior): 
             <a href="${config.url_after}"> ${config.url_after}</a>
             </h1>
-            <p>Executed: ${datetime}</p>
+            <p>Hora de ejecución: ${datetime}</p>
             <div id="visualizer">
               ${bodyReport(resInfo)}
                

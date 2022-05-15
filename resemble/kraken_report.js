@@ -62,11 +62,11 @@ function createReport(datetime, resInfo) {
     return `
     <html>
         <head>
-            <title> Equipo 24 Cypress Kraken Reporte de Regresiones</title>
+            <title> Equipo 24 Kraken Reporte de Regresiones</title>
             <link href="index.css" type="text/css" rel="stylesheet">
         </head>
         <body style="color:black; font-size: 20px; font-weight: bold; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
-          <h1> Equipo 24 Cypress Kraken Reporte de Regresiones</h1>
+          <h1> Equipo 24 Kraken Reporte de Regresiones</h1>
             <h3>URL de Ghost v3 (Version Original): 
                  <a href="${config.url_before}"> ${config.url_before}</a>
             </h3>
