@@ -37,8 +37,8 @@ function bodyReport(resInfo){
   index = 0;
   console.log(" Init bodyReport");
 
-  for (let feature_id = 1; feature_id < config.features.length; feature_id++) {
-    for ( let scenario_id = 1;   scenario_id < config.scenarios.length;  scenario_id++ ) {  
+  for (let feature_id = 1; feature_id <= config.features.length; feature_id++) {
+    for ( let scenario_id = 1;   scenario_id <= config.scenarios.length;  scenario_id++ ) {  
       screenshot_compare_aux =`../cypress/results/compare_cypress/compare_${feature_id}_${scenario_id}.png`;      
 
       console.log(`Compare: ${screenshot_compare_aux}`);      
@@ -85,8 +85,8 @@ async function executeValidateImagesAndCreateReport() {
   let index = 0;
   let datetime = new Date().toISOString().replace(/:/g, ".");
 
-  for (let feature_id = 1; feature_id < config.features.length; feature_id++) {
-    for ( let scenario_id = 1;   scenario_id < config.scenarios.length;  scenario_id++ ) {      
+  for (let feature_id = 1; feature_id <= config.features.length; feature_id++) {
+    for ( let scenario_id = 1;   scenario_id <= config.scenarios.length;  scenario_id++ ) {      
 
       screenshot_ghost3_aux =`../cypress/results/ghost3_cypress/ghost3_${feature_id}_${scenario_id}.png`;
       screenshot_ghost4_aux =`../cypress/results/ghost4_cypress/ghost4_${feature_id}_${scenario_id}.png`;
