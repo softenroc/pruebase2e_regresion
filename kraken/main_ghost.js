@@ -71,9 +71,9 @@ async function disable_all_features() {
 
 async function enabled_all_features() {
   console.log("Selected enabled_all_features");
-  const files = await fs.promises.readdir(folder);
-  if(file.includes('.feature')){    
+  const files = await fs.promises.readdir(folder);  
   for (const file of files) {
+    if(file.includes('.feature')){    
     const last = file.charAt(file.length - 1);
     if (last == "_") {
       fs.rename(
