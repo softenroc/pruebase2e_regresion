@@ -26,7 +26,7 @@
 ### Documento detalle de las Funcionalidades tomadas para generacion de datos
 
 
-### Pros y contras: Kraken y Cypress con regresiones visuales usando ResembleJS
+### Pros y contras:
 
 
 
