@@ -157,9 +157,19 @@ Cypress.Commands.add("access_valid_ghost3", () => {
     cy.wait(2000);
   });
 
-  Cypress.Commands.add("validate_location_staff_ghost3", () => {
-    cy.log("Then Validate value text having id user-location equals to Bucaramanga");
-    cy.get('input[id="user-location"]').should("have.value", "Bucaramanga");
+  Cypress.Commands.add("validate_location_staff_ghost3", (location) => {
+    cy.log("Then Validate value text having id user-location equals to "+location);
+    cy.get('input[id="user-location"]').should("have.value", location);
+    cy.wait(2000);
+  });
+  Cypress.Commands.add("validate_user_name_staff_ghost3", (user_name) => {
+    cy.log("Then Validate value text having id user-name equals to "+user_name);
+    cy.get('input[id="user-name"]').should("have.value", user_name);
+    cy.wait(2000);
+  });
+  Cypress.Commands.add("validate_email_correct_staff_ghost3", (email) => {
+    cy.log("Then Validate value text having id email equals to "+email);
+    cy.get('input[id="user-email"]').should("have.value", email);
     cy.wait(2000);
   });
 
@@ -168,7 +178,26 @@ Cypress.Commands.add("access_valid_ghost3", () => {
     cy.get("span[class='gh-badge author']").click();
     cy.wait(1000);
   });
-
+  Cypress.Commands.add("validate_website_staff_ghost3", (webSite) => {
+    cy.log("Then Validate value text having id user-webSite equals to "+webSite);
+    cy.get('input[id="user-website"]').should("have.value", webSite);
+    cy.wait(2000);
+  });
+  Cypress.Commands.add("validate_bio_staff_ghost3", (bio) => {
+    cy.log("Then Validate value text having id user-bio equals to "+bio);
+    cy.get('textarea[id="user-bio"]').should("have.value", bio);
+    cy.wait(2000);
+  });
+  Cypress.Commands.add("validate_facebook_staff_ghost3", (face) => {
+    cy.log("Then Validate value text having id user-facebook equals to "+face);
+    cy.get('input[id="user-facebook"]').should("have.value", "https://www.facebook.com/"+face);
+    cy.wait(2000);
+  });
+  Cypress.Commands.add("validate_twitter_staff_ghost3", (twitter) => {
+    cy.log("Then Validate value text having id user-twitter equals to "+twitter);
+    cy.get('input[id="user-twitter"]').should("have.value", "https://twitter.com/"+twitter);
+    cy.wait(2000);
+  });
   Cypress.Commands.add("input_website_staff_ghost3", () => {
     cy.log("And I fill on element having id user-website with text http://www.kraken-node.com");
     cy.get('input[id="user-website"]')
@@ -176,12 +205,6 @@ Cypress.Commands.add("access_valid_ghost3", () => {
         .should("be.visible")
         .type("http://www.kraken-node.com", { force: true })
         .should("have.value", "http://www.kraken-node.com");
-    cy.wait(2000);
-  });
-
-  Cypress.Commands.add("validate_website_staff_ghost3", () => {
-    cy.log("Then Validate value text having id user-website equals to http://www.kraken-node.com");
-    cy.get('input[id="user-website"]').should("have.value", "http://www.kraken-node.com");
     cy.wait(2000);
   });
 
