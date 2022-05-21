@@ -1,9 +1,9 @@
 ---
 name: Bug report
 about: Create a report to help us improve
-title: bug_regressions
-labels: bug
-assignees: softenroc, J8A9902, Estef2022
+title: ''
+labels: ''
+assignees: ''
 
 ---
 
