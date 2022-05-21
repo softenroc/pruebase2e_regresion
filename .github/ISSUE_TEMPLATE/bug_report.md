@@ -7,32 +7,41 @@ assignees: ''
 
 ---
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+### TÍTULO
+> El objetivo del título es dar una explicación bastante corta y puntual del defecto a reportar.
 
-**To Reproduce**
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+------------
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
+###COMPORTAMIENTO ESPERADO
+> Una descripción del comportamiento esperado para el escenario de pruebas ejecutado.
 
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
+###COMPORTAMIENTO ACTUAL
+> Descripción del comportamiento actual para el escenario de pruebas ejecutado.
 
-**Desktop (please complete the following information):**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
+###PASOS PARA REPRODUCIR DEFECTO
+> Secuencia de pasos que se requieren para poder reproducir el defecto. Si en la ejecución del escenario usted hizo uso de algún dato, debe detallar en los pasos, que dato uso y en donde lo uso.
 
-**Smartphone (please complete the following information):**
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
- - Browser [e.g. stock browser, safari]
- - Version [e.g. 22]
+###EVIDENCIAS
+> Conjunto de imagenes o videos que complementan la información dada en el reporte.
 
-**Additional context**
-Add any other context about the problem here.
+###CONTEXTO
+> En esta sección se debe detallar el contexto en el que fue ejecutado el escenario de prueba.
+
+
+------------
+
+
+###VERSION DE LA APP: 
+3.41.1
+
+###SISTEMA OPERATIVO: 
+Windows XX, Mac XX, Ubuntu XX
+
+###BROWSER:  
+Google Chrome Versión 101.0.4951.67 (Build oficial) (64 bits)
+
+------------
+
+
+###INFORMACIÓN ADICIONAL
+> Datos adicionales a los que se tenga acceso respecto al defecto. Por ejemplo, trazas de error, defecto similares ya reportados, posible solución, posible implementación de la solución, links a recursos externos que brinden más información: stackoverflow, gitter, et
