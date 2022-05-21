@@ -55,6 +55,12 @@ Password: equipo24equipo24
 
 -  Accedemos al link http://localhost:3001/ghost : con el usuario  equipo24@mail.com  y la contraseña equipo24equipo24  para validar la creación del usuario.
 
+##### Para habilitar la opcion de Members
+
+- Click en la opcion **Labs** del menu
+- Click en **Members**
+- En la opción Enable members dar click en la opción para habilitar **Members**.
+- Validar que en el menú aparece la opción de **Members**
 
 ### Pasos Cypress
 
