@@ -463,6 +463,12 @@ Cypress.Commands.add("access_valid_ghost3", () => {
     cy.wait(2000);
   });
 
+  Cypress.Commands.add("validate_mod_color_tag_ghost3_with_color", (color) => {
+    cy.log("Then Validate value text having name accent-color equals to: "+color);
+    cy.get('input[name="accent-color"]').should("have.value", color);
+    cy.wait(2000);
+  });
+
   Cypress.Commands.add("click_delete_tag_ghost3", () => {
     cy.log("And I click delete button");
     cy.get('button[class="gh-btn gh-btn-red gh-btn-icon mb15"]').click();
