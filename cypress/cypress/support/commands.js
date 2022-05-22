@@ -432,6 +432,22 @@ Cypress.Commands.add("access_valid_ghost3", () => {
     cy.wait(1000);
   });
 
+  Cypress.Commands.add("input_url_canonical_tags_with", (url_) => {
+    cy.log("And I fill the input url-canonical with url :"+url_);
+    cy.get('#canonical-url')
+      .clear()
+      .should("be.visible")
+      .type(
+        url_,
+        { force: true }
+      )
+      .should(
+        "have.value",
+        url_
+      );
+    cy.wait(1000);
+  });
+
   Cypress.Commands.add("navigate_new_tag_ghost3", () => {
     cy.log("And I navigate to new tag created");
     cy.visit(Cypress.env('baseUrl_ghost3')+"/ghost/#/tags/new-tag-with-kraken"); 
@@ -867,6 +883,7 @@ Cypress.Commands.add("input_slug_tag_ghost4", () => {
     .should("have.value", "new-tag-with-kraken");
   cy.wait(1000);
 });
+
 Cypress.Commands.add("input_password_tag_ghost4", () => {
   cy.log("And I fill on element having id user-password-new with shortpwd");
   cy.get('#tag-description')

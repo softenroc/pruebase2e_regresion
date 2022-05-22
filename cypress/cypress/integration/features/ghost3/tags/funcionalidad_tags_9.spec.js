@@ -1,4 +1,5 @@
 const fs = require('fs');
+const  path_data = "data/tags/";
 
 let slug_tag = "";
 let name_tag = "";
@@ -39,9 +40,17 @@ describe('Feature: Tags', () => {
         cy.log("And I enter random description:"+tag.description);      
         cy.input_description_tag_ghost3_with(tag.description);
 
-        
+        cy.get("button[class='gh-btn']").then($buttons => {
+            console.log("buttons: "+$buttons.length)                    
+            $buttons.get(0).click();                
+            cy.wait(1000);                            
+            cy.input_url_canonical_tags_with(tag.url);            
+            
+        });
+
         cy.click_save_staff_ghost3();
 
+        cy.then_validate_response_error("The url should be a valid url");    
 
     });   
   }
