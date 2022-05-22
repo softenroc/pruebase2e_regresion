@@ -370,7 +370,7 @@ Cypress.Commands.add("access_valid_ghost3", () => {
   });
 
   Cypress.Commands.add("input_name_color_tag_ghost3", (color) => {
-    cy.log("And I fill on element having id input[name=accent-color] with F1C40F");
+    cy.log("And I fill on element having id input[name=accent-color] with: "+color);
     cy.get('input[name="accent-color"]')
       .clear()
       .should("be.visible")
