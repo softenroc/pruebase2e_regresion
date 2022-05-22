@@ -7,7 +7,7 @@ describe('Feature: Tags', () => {
         cy.home_ghost3();
     })
 
-    it('Cuando creamos un nuevo tag e ingresamos un slug con espacios, entonces se debe mostrar un error y no deja crear el tag.', () => {        
+    it('Cuando creamos un nuevo tag e ingresamos descripcion con 501 caracteres , entonces se debe mostrar el error Description cannot be longer than 500 characters.', () => {        
         cy.access_valid_ghost3();
         cy.wait(3000);
         cy.navigate_tags_ghost3();
