@@ -32,6 +32,33 @@ Cypress.Commands.add("access_valid_ghost3", () => {
   });
 
 
+  Cypress.Commands.add("and_i_click_on_sign_in_button",() => {
+    cy.log("And I click on element having id ember12");
+    cy.get('button[id="ember12"]').click();
+    cy.wait(3000);
+  });
+
+  Cypress.Commands.add("when_i_enter_email_registry",() => {
+    cy.log("When I enter email registry");
+    cy.get('input[id="ember8"]').type(Cypress.env('user'));      
+    cy.wait(2000);
+  });
+
+  Cypress.Commands.add("then_validate_text_main_error", (error_message) =>{
+    cy.log(" Then Validate text main error to login equals to "+error_message);
+    cy.get('p[class="main-error"]').should(($p) => {
+        const message = $p.text();
+        expect(message).contain(error_message);
+    });
+    cy.wait(2000);
+  });
+
+  Cypress.Commands.add("and_i_click_on_forgot_link",() =>{  
+    cy.log("And I click on element having id ember11");
+    cy.get('button[id="ember11"]').click();
+    cy.wait(3000);
+  });
+
   Cypress.Commands.add("navigate_post_ghost3", () => {
     cy.log("And I navigate to page post");
     cy.visit('http://localhost:3001/ghost/#/posts')
@@ -47,8 +74,28 @@ Cypress.Commands.add("access_valid_ghost3", () => {
 
   Cypress.Commands.add("enter_tittle_ghost3", (tittle) => {
     cy.log("And I enter title");
-    cy.get("textarea[class='gh-editor-title ember-text-area gh-input ember-view']").type(tittle);
+    cy.get("textarea[class='gh-editor-title ember-text-area gh-input ember-view']").clear().type(tittle);
     cy.wait(2000)
+  });
+  Cypress.Commands.add("enter_date_post_ghost3", (date) => {
+    cy.log("And I enter date");
+    cy.get("input[placeholder='YYYY-MM-DD'").first().clear().type(date);
+    cy.wait(2000) 
+  });
+  Cypress.Commands.add("enter_date_config_post_ghost3", (date) => {
+    cy.log("And I enter date");
+    cy.get("input[placeholder='YYYY-MM-DD'").clear().type(date);
+    cy.wait(2000) 
+  });
+  Cypress.Commands.add("enter_hora_post_ghost3", (hora) => {
+    cy.log("And I enter time");
+    cy.get("div[class='gh-date-time-picker-time ").first().clear().type(hora);
+    cy.wait(2000) 
+  });
+  Cypress.Commands.add("enter_hora_config_post_ghost3", (hora) => {
+    cy.log("And I enter time");
+    cy.get("div[class='gh-date-time-picker-time ").clear().type(hora);
+    cy.wait(2000) 
   });
 
   Cypress.Commands.add("enter_description_ghost3", () => {
@@ -157,9 +204,19 @@ Cypress.Commands.add("access_valid_ghost3", () => {
     cy.wait(2000);
   });
 
-  Cypress.Commands.add("validate_location_staff_ghost3", () => {
-    cy.log("Then Validate value text having id user-location equals to Bucaramanga");
-    cy.get('input[id="user-location"]').should("have.value", "Bucaramanga");
+  Cypress.Commands.add("validate_location_staff_ghost3", (location) => {
+    cy.log("Then Validate value text having id user-location equals to "+location);
+    cy.get('input[id="user-location"]').should("have.value", location);
+    cy.wait(2000);
+  });
+  Cypress.Commands.add("validate_user_name_staff_ghost3", (user_name) => {
+    cy.log("Then Validate value text having id user-name equals to "+user_name);
+    cy.get('input[id="user-name"]').should("have.value", user_name);
+    cy.wait(2000);
+  });
+  Cypress.Commands.add("validate_email_correct_staff_ghost3", (email) => {
+    cy.log("Then Validate value text having id email equals to "+email);
+    cy.get('input[id="user-email"]').should("have.value", email);
     cy.wait(2000);
   });
 
@@ -168,7 +225,26 @@ Cypress.Commands.add("access_valid_ghost3", () => {
     cy.get("span[class='gh-badge author']").click();
     cy.wait(1000);
   });
-
+  Cypress.Commands.add("validate_website_staff_ghost3", (webSite) => {
+    cy.log("Then Validate value text having id user-webSite equals to "+webSite);
+    cy.get('input[id="user-website"]').should("have.value", webSite);
+    cy.wait(2000);
+  });
+  Cypress.Commands.add("validate_bio_staff_ghost3", (bio) => {
+    cy.log("Then Validate value text having id user-bio equals to "+bio);
+    cy.get('textarea[id="user-bio"]').should("have.value", bio);
+    cy.wait(2000);
+  });
+  Cypress.Commands.add("validate_facebook_staff_ghost3", (face) => {
+    cy.log("Then Validate value text having id user-facebook equals to "+face);
+    cy.get('input[id="user-facebook"]').should("have.value", "https://www.facebook.com/"+face);
+    cy.wait(2000);
+  });
+  Cypress.Commands.add("validate_twitter_staff_ghost3", (twitter) => {
+    cy.log("Then Validate value text having id user-twitter equals to "+twitter);
+    cy.get('input[id="user-twitter"]').should("have.value", "https://twitter.com/"+twitter);
+    cy.wait(2000);
+  });
   Cypress.Commands.add("input_website_staff_ghost3", () => {
     cy.log("And I fill on element having id user-website with text http://www.kraken-node.com");
     cy.get('input[id="user-website"]')
@@ -176,12 +252,6 @@ Cypress.Commands.add("access_valid_ghost3", () => {
         .should("be.visible")
         .type("http://www.kraken-node.com", { force: true })
         .should("have.value", "http://www.kraken-node.com");
-    cy.wait(2000);
-  });
-
-  Cypress.Commands.add("validate_website_staff_ghost3", () => {
-    cy.log("Then Validate value text having id user-website equals to http://www.kraken-node.com");
-    cy.get('input[id="user-website"]').should("have.value", "http://www.kraken-node.com");
     cy.wait(2000);
   });
 
@@ -357,6 +427,66 @@ Cypress.Commands.add("access_valid_ghost3", () => {
     cy.log("And I navigate to page pages");
     cy.visit(Cypress.env('baseUrl_ghost3')+"/ghost/#/pages/"); 
     cy.wait(2000);
+  });
+
+  Cypress.Commands.add("navigate_labs_ghost3", () => {
+    cy.log("And I navigate to member members");
+    cy.visit(Cypress.env('baseUrl_ghost3')+"/ghost/#/settings/labs"); 
+    cy.wait(2000);
+  });
+
+  Cypress.Commands.add("click_configure_members_ghost3", () => {
+    cy.log("Configure");
+    cy.get('div[class="gh-setting-first gh-setting-last"]').click();
+    cy.wait(2000);
+  });
+
+  Cypress.Commands.add("click_enable_members_ghost3", () => {
+    cy.log("Enable members");
+    cy.get('span[class="input-toggle-component"]').click();
+    cy.wait(2000);
+  });
+
+  Cypress.Commands.add("navigate_members_ghost3", () => {
+    cy.log("And I navigate to member members");
+    cy.visit(Cypress.env('baseUrl_ghost3')+"/ghost/#/members/"); 
+    cy.wait(2000);
+  });
+
+  Cypress.Commands.add("click_new_member_ghost3", () => {
+    cy.log("New member");
+    cy.get('a[class="ember-view gh-btn gh-btn-green"]').click();
+    cy.wait(2000);
+  });
+
+  Cypress.Commands.add("click_leave", () => {
+    cy.log("Leave");
+    cy.get('button[class="gh-btn gh-btn-red"]').click();
+    cy.wait(2000);
+  });
+
+  Cypress.Commands.add("click_own_member", () => {
+    cy.log("Own member");
+    cy.get('div[class="w-80"]').click('topRight');
+    cy.wait(2000);
+  });
+
+  Cypress.Commands.add("click_delete_member", () => {
+    cy.log("Delete member");
+    cy.get('button[class="gh-btn gh-btn-red gh-btn-icon mt14"]').click();
+    cy.wait(1000);
+  });
+
+  Cypress.Commands.add("click_delete", () => {
+    cy.log("Delete");
+    cy.get('button[class="gh-btn gh-btn-red gh-btn-icon ember-view"]').click();
+    cy.wait(1000);
+  });
+
+  Cypress.Commands.add("click_add_yourself_as_a_member", () => {
+    cy.log("Add yourself as a member");
+    cy.get('button[class="gh-btn gh-btn-green"]').click();
+    cy.wait(1000);
   });
 
   Cypress.Commands.add("click_new_page_ghost3", () => {
