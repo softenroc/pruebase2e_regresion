@@ -3,8 +3,7 @@ const  path_data = "data/acceso/";
 
 describe("Feature: Acceso a la plataforma", () => {
   beforeEach(() => {
-    cy.home_ghost3();
-    cy.screenshot();
+    cy.home_ghost3();    
   });
   it(" Como usuario registrado ingreso un usuario y una contraseña valida y acceso a la plataforma ", () => {
     when_i_enter_email_registry_();        
