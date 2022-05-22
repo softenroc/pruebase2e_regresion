@@ -82,9 +82,19 @@ Cypress.Commands.add("access_valid_ghost3", () => {
     cy.get("input[placeholder='YYYY-MM-DD'").first().clear().type(date);
     cy.wait(2000) 
   });
+  Cypress.Commands.add("enter_date_config_post_ghost3", (date) => {
+    cy.log("And I enter date");
+    cy.get("input[placeholder='YYYY-MM-DD'").clear().type(date);
+    cy.wait(2000) 
+  });
   Cypress.Commands.add("enter_hora_post_ghost3", (hora) => {
     cy.log("And I enter time");
     cy.get("div[class='gh-date-time-picker-time ").first().clear().type(hora);
+    cy.wait(2000) 
+  });
+  Cypress.Commands.add("enter_hora_config_post_ghost3", (hora) => {
+    cy.log("And I enter time");
+    cy.get("div[class='gh-date-time-picker-time ").clear().type(hora);
     cy.wait(2000) 
   });
 
