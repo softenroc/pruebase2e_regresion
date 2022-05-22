@@ -13,7 +13,7 @@ describe("Feature: Acceso a la plataforma", () => {
   });
 
   async function when_i_enter_email_registry_(){
-    cy.readFile(path_data+'data_funcionalidad_acceso_1.json').then(data => {   
+    cy.readFile(path_data+'data_funcionalidad_acceso_ok.json').then(data => {   
       var size = data.length;  
       var index = Math.floor(Math.random() * size);
       cy.log("size data pool:"+size);  

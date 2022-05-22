@@ -22,16 +22,6 @@ describe("Feature: Acceso a la plataforma", () => {
       cy.wait(2000);
   });
 }
-
-  async function then_validate_text_main_error(){
-    cy.log("Validate text main error to login equals to <User not found.>");
-    cy.get('p[class="main-error"]').should(($p) => {
-        const message = $p.text();
-        expect(message).contain("User not found.");
-    });
-    cy.wait(2000);
-  };
-
  
   
 

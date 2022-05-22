@@ -9,7 +9,7 @@ function newFunction() {
             cy.home_ghost3();
         });
 
-        it("Como owner/staff ingreso a mi perfil de Members para editar email con formato invalido y retorna error", () => {
+        it("Como owner/staff ingreso a Members para crear un miembro con email con formato invalido y retorna error", () => {
             cy.access_valid_ghost3();
             cy.wait(4000);
             cy.navigate_labs_ghost3();
@@ -17,7 +17,7 @@ function newFunction() {
             cy.click_configure_members_ghost3();
             cy.click_enable_members_ghost3();
             cy.navigate_members_ghost3();
-            cy.click_own_member();
+            cy.click_new_member_ghost3();
             when_i_enter_a_name_email();
             and_i_click_on_save_button();
             then_validate_text_error();
@@ -31,7 +31,7 @@ function newFunction() {
         });
 
         async function when_i_enter_a_name_email() {
-            cy.readFile(path_data + 'data_funcionalidad_members_2.json').then(data => {
+            cy.readFile(path_data + 'data_funcionalidad_members_5.json').then(data => {
                 var size = data.length;
                 var index = Math.floor(Math.random() * size);
                 cy.log("size data pool:" + size);
