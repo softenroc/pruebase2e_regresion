@@ -5,13 +5,8 @@ describe("Feature: Acceso a la plataforma", () => {
   
     it(" Como usuario no registrado quiero recuperar una contraseña entonces retorne mensaje usuario no existe", () => {
       when_i_enter_email_not_registry_();
-      and_i_click_on_forgot_link();
-      cy.log("Validate text main error to login equals to <User not found.>");
-      cy.get('p[class="main-error"]').should(($p) => {
-          const message = $p.text();
-          expect(message).contain("User not found.");
-      });
-      cy.wait(2000);
+      cy.and_i_click_on_forgot_link();
+      cy.then_validate_text_main_error("User not found");
     });
   });
   
@@ -27,11 +22,14 @@ describe("Feature: Acceso a la plataforma", () => {
       cy.wait(2000);
   });
 }
-  
-  async function and_i_click_on_forgot_link(){  
-    cy.log("And I click on element having id ember11");
-    cy.get('button[id="ember11"]').click();
-    cy.wait(3000);
+
+  async function then_validate_text_main_error(){
+    cy.log("Validate text main error to login equals to <User not found.>");
+    cy.get('p[class="main-error"]').should(($p) => {
+        const message = $p.text();
+        expect(message).contain("User not found.");
+    });
+    cy.wait(2000);
   };
 
  

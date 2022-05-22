@@ -7,12 +7,9 @@ describe("Feature: Acceso a la plataforma", () => {
     cy.screenshot();
   });
   it(" Como usuario registrado ingreso un usuario y una contraseña valida y acceso a la plataforma ", () => {
-    when_i_enter_email_registry_();
-    cy.screenshot();
-    cy.wait(3000);
-    cy.screenshot();
-    cy.close_session_ghost3();
-    cy.wait(2000);
+    when_i_enter_email_registry_();        
+    cy.and_i_click_on_sign_in_button();
+    cy.close_session_ghost3();    
   });
 
   async function when_i_enter_email_registry_(){
