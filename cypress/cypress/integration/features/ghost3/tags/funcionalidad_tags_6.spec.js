@@ -17,12 +17,12 @@ describe('Feature: Tags', () => {
         cy.wait(3000);
         cy.navigate_tags_ghost3();
         cy.click_new_tag_ghost3();
-        when_i_entry_a_name_with_190_characters();                          
+        when_i_entry_a_color_with_bad_format();                          
     })
   });
 
 
-  async function when_i_entry_a_name_with_190_characters(){ 
+  async function when_i_entry_a_color_with_bad_format(){ 
     cy.readFile(path_data+'data_funcionalidad_tags_name_borde_inferior.json').then(data => {  
         var size = data.length;  
         var index = Math.floor(Math.random() * size);
