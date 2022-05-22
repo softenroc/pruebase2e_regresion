@@ -428,13 +428,13 @@ Cypress.Commands.add("access_valid_ghost3", () => {
   Cypress.Commands.add("click_configure_members_ghost3", () => {
     cy.log("Configure");
     cy.get('div[class="gh-setting-first gh-setting-last"]').click();
-    cy.wait(4000);
+    cy.wait(2000);
   });
 
   Cypress.Commands.add("click_enable_members_ghost3", () => {
     cy.log("Enable members");
     cy.get('span[class="input-toggle-component"]').click();
-    cy.wait(4000);
+    cy.wait(2000);
   });
 
   Cypress.Commands.add("navigate_members_ghost3", () => {
@@ -446,13 +446,37 @@ Cypress.Commands.add("access_valid_ghost3", () => {
   Cypress.Commands.add("click_new_member_ghost3", () => {
     cy.log("New member");
     cy.get('a[class="ember-view gh-btn gh-btn-green"]').click();
-    cy.wait(4000);
+    cy.wait(2000);
   });
 
   Cypress.Commands.add("click_leave", () => {
     cy.log("Leave");
     cy.get('button[class="gh-btn gh-btn-red"]').click();
-    cy.wait(4000);
+    cy.wait(2000);
+  });
+
+  Cypress.Commands.add("click_own_member", () => {
+    cy.log("Own member");
+    cy.get('div[class="w-80"]').click('topRight');
+    cy.wait(2000);
+  });
+
+  Cypress.Commands.add("click_delete_member", () => {
+    cy.log("Delete member");
+    cy.get('button[class="gh-btn gh-btn-red gh-btn-icon mt14"]').click();
+    cy.wait(1000);
+  });
+
+  Cypress.Commands.add("click_delete", () => {
+    cy.log("Delete");
+    cy.get('button[class="gh-btn gh-btn-red gh-btn-icon ember-view"]').click();
+    cy.wait(1000);
+  });
+
+  Cypress.Commands.add("click_add_yourself_as_a_member", () => {
+    cy.log("Add yourself as a member");
+    cy.get('button[class="gh-btn gh-btn-green"]').click();
+    cy.wait(1000);
   });
 
   Cypress.Commands.add("click_new_page_ghost3", () => {

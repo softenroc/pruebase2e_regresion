@@ -6,7 +6,7 @@ describe("Feature: Members", () => {
     cy.home_ghost3();
   });
 
-  it("Como owner/staff ingreso a Members para editar perfil", () => {
+  it("Como owner/staff ingreso a Members para crear un miembro con email vacio y retorna error", () => {
     cy.access_valid_ghost3();
     cy.wait(4000);
     cy.navigate_labs_ghost3();
@@ -20,9 +20,13 @@ describe("Feature: Members", () => {
     and_i_click_on_save_button();
     cy.wait(4000);
     then_validate_text_error();
+    cy.navigate_labs_ghost3();
+    cy.click_leave();
+    cy.click_configure_members_ghost3();
+    cy.click_enable_members_ghost3();
     cy.close_session_ghost3();
     cy.wait(2000);
-    cy.click_leave();
+    
   });
 
   async function when_i_enter_a_name_email(){

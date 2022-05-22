@@ -9,7 +9,7 @@ function newFunction() {
             cy.home_ghost3();
         });
 
-        it("Como owner/staff ingreso a mi perfil de Members para editar email con formato invalido y retorna error", () => {
+        it("Como owner/staff ingreso a mi perfil de Members para editar email vacio y retorna error", () => {
             cy.access_valid_ghost3();
             cy.wait(4000);
             cy.navigate_labs_ghost3();
@@ -18,31 +18,23 @@ function newFunction() {
             cy.click_enable_members_ghost3();
             cy.navigate_members_ghost3();
             cy.click_own_member();
-            when_i_enter_a_name_email();
+            when_i_enter_email();
             and_i_click_on_save_button();
+            cy.wait(-2000);
             then_validate_text_error();
             cy.navigate_labs_ghost3();
             cy.click_leave();
             cy.click_configure_members_ghost3();
             cy.click_enable_members_ghost3();
             cy.close_session_ghost3();
-            cy.wait(2000);
-            cy.close_session_ghost3();
         });
 
-        async function when_i_enter_a_name_email() {
-            cy.readFile(path_data + 'data_funcionalidad_members_2.json').then(data => {
+        async function when_i_enter_email() {
+            cy.readFile(path_data + 'data_funcionalidad_members_4.json').then(data => {
                 var size = data.length;
                 var index = Math.floor(Math.random() * size);
-                cy.log("size data pool:" + size);
-                cy.log("When I enter a name  " + data[index].first_name);
-                cy.get('input[id="member-name"]').clear({force: true})
-                cy.get('input[id="member-name"]').type(data[index].first_name,{force: true});
-                cy.wait(2000);
-
-                cy.log("And I enter a invalid email:" + data[index].email);
-                cy.get('input[id="member-email"]').clear({force: true});
-                cy.get('input[id="member-email"]').type(data[index].email,{force: true});
+                cy.log("And I enter a null email  "+data[index].email);
+                cy.get('input[id="member-email"]').type("text").clear({force: true});
                 cy.wait(2000);
 
             });
@@ -54,13 +46,13 @@ function newFunction() {
             cy.wait(3000);
         };
 
-        async function then_validate_text_error() {
-            cy.log(" Then Validate text main error equals to <Invalid Email.>");
+        async function then_validate_text_error(){
+            cy.log(" Then Validate text main error equals to <Please enter an email.>");
             cy.get('p[class="response"]').should(($p) => {
                 const message = $p.text();
-                expect(message).contain("Invalid Email.");
+                expect(message).contain("Please enter an email.");
             });
-            cy.wait(2000);
+            
         };
 
     });
