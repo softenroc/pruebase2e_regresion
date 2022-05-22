@@ -53,6 +53,15 @@ Cypress.Commands.add("access_valid_ghost3", () => {
     cy.wait(2000);
   });
 
+  Cypress.Commands.add("then_validate_response_error", (error_message) =>{
+    cy.log(" Then Validate text response error to "+error_message);
+    cy.get('p[class="response"]').should(($p) => {
+        const message = $p.text();
+        expect(message).contain(error_message);
+    });
+    cy.wait(2000);
+  });
+
   Cypress.Commands.add("and_i_click_on_forgot_link",() =>{  
     cy.log("And I click on element having id ember11");
     cy.get('button[id="ember11"]').click();
@@ -361,7 +370,7 @@ Cypress.Commands.add("access_valid_ghost3", () => {
   });
 
   Cypress.Commands.add("input_name_color_tag_ghost3", (color) => {
-    cy.log("And I fill on element having id input[name=accent-color] with F1C40F");
+    cy.log("And I fill on element having id input[name=accent-color] with: "+color);
     cy.get('input[name="accent-color"]')
       .clear()
       .should("be.visible")
@@ -451,6 +460,12 @@ Cypress.Commands.add("access_valid_ghost3", () => {
   Cypress.Commands.add("validate_modificate_color_tag_ghost3", () => {
     cy.log("Then Validate value text having name accent-color equals to0FE3F1");
     cy.get('input[name="accent-color"]').should("have.value", "0FE3F1");
+    cy.wait(2000);
+  });
+
+  Cypress.Commands.add("validate_mod_color_tag_ghost3_with_color", (color) => {
+    cy.log("Then Validate value text having name accent-color equals to: "+color);
+    cy.get('input[name="accent-color"]').should("have.value", color);
     cy.wait(2000);
   });
 
