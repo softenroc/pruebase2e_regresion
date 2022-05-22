@@ -382,6 +382,42 @@ Cypress.Commands.add("access_valid_ghost3", () => {
     cy.wait(2000);
   });
 
+  Cypress.Commands.add("navigate_labs_ghost3", () => {
+    cy.log("And I navigate to member members");
+    cy.visit(Cypress.env('baseUrl_ghost3')+"/ghost/#/settings/labs"); 
+    cy.wait(2000);
+  });
+
+  Cypress.Commands.add("click_configure_members_ghost3", () => {
+    cy.log("Configure");
+    cy.get('div[class="gh-setting-first gh-setting-last"]').click();
+    cy.wait(4000);
+  });
+
+  Cypress.Commands.add("click_enable_members_ghost3", () => {
+    cy.log("Enable members");
+    cy.get('span[class="input-toggle-component"]').click();
+    cy.wait(4000);
+  });
+
+  Cypress.Commands.add("navigate_members_ghost3", () => {
+    cy.log("And I navigate to member members");
+    cy.visit(Cypress.env('baseUrl_ghost3')+"/ghost/#/members/"); 
+    cy.wait(2000);
+  });
+
+  Cypress.Commands.add("click_new_member_ghost3", () => {
+    cy.log("New member");
+    cy.get('a[class="ember-view gh-btn gh-btn-green"]').click();
+    cy.wait(4000);
+  });
+
+  Cypress.Commands.add("click_leave", () => {
+    cy.log("Leave");
+    cy.get('button[class="gh-btn gh-btn-red"]').click();
+    cy.wait(4000);
+  });
+
   Cypress.Commands.add("click_new_page_ghost3", () => {
     cy.log("And click en new page");
     cy.visit(Cypress.env('baseUrl_ghost3')+"/ghost/#/editor/page");
