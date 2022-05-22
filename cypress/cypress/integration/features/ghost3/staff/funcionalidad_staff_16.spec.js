@@ -1,13 +1,13 @@
 import {faker} from '@faker-js/faker'
 
-let newPassword = faker.internet.password(9);
+let newPassword = faker.internet.password(10);
 let oldPassword = faker.internet.password(10);
 describe("Feature: Opcion Staf", () => {
   beforeEach(() => {
     cy.home_ghost3();
   });
 
-  it(" Como owner ingreso a Staff , link owner y cambio la informacion de contraseña con numero de caracteres menor a 10 ", () => {
+  it(" Como owner ingreso a Staff , link owner y cambio la informacion de contraseña dejando vacio la contraseña antigua ", () => {
     cy.access_valid_ghost3();
     cy.wait(3000);
     cy.navigate_staff_ghost3(); 
@@ -32,10 +32,10 @@ describe("Feature: Opcion Staf", () => {
       cy.log("And I click save button");
       cy.get("button[class='gh-btn gh-btn-icon button-change-password gh-btn-red ember-view']").click();
       cy.wait(2000);
-      cy.log(" Then Validate text main error to bio equals to <Password must be at least 10 characters long>");
-      cy.get('p[class="response"]').should(($p) => {
-        const message = $p.text();
-        expect(message).contain("Password must be at least 10 characters long");
+      cy.log(" Then Validate text main error to bio equals to <Your password is incorrect. Your password is incorrect.>");
+      cy.get('div[class="gh-alert-content"]').should(($div) => {
+        const message = $div.text();
+        expect(message).contain("Your password is incorrect. Your password is incorrect.");
       });
     cy.close_session_ghost3();
     cy.wait(2000);

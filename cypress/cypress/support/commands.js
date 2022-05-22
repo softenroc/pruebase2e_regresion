@@ -74,8 +74,18 @@ Cypress.Commands.add("access_valid_ghost3", () => {
 
   Cypress.Commands.add("enter_tittle_ghost3", (tittle) => {
     cy.log("And I enter title");
-    cy.get("textarea[class='gh-editor-title ember-text-area gh-input ember-view']").type(tittle);
+    cy.get("textarea[class='gh-editor-title ember-text-area gh-input ember-view']").clear().type(tittle);
     cy.wait(2000)
+  });
+  Cypress.Commands.add("enter_date_post_ghost3", (date) => {
+    cy.log("And I enter date");
+    cy.get("input[placeholder='YYYY-MM-DD'").first().clear().type(date);
+    cy.wait(2000) 
+  });
+  Cypress.Commands.add("enter_hora_post_ghost3", (hora) => {
+    cy.log("And I enter time");
+    cy.get("div[class='gh-date-time-picker-time ").first().clear().type(hora);
+    cy.wait(2000) 
   });
 
   Cypress.Commands.add("enter_description_ghost3", () => {
