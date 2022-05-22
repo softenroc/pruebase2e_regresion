@@ -350,6 +350,16 @@ Cypress.Commands.add("access_valid_ghost3", () => {
     cy.wait(1000);
   });
 
+  Cypress.Commands.add("input_tag_name_tag_ghost3_with", (name) => {
+    cy.log("And I fill on element having id tag-name with "+name);
+    cy.get('input[id="tag-name"]')
+      .clear()
+      .should("be.visible")
+      .type(name, { force: true })
+      .should("have.value", name);
+    cy.wait(1000);
+  });
+
   Cypress.Commands.add("input_name_color_tag_ghost3", (color) => {
     cy.log("And I fill on element having id input[name=accent-color] with F1C40F");
     cy.get('input[name="accent-color"]')
@@ -369,6 +379,18 @@ Cypress.Commands.add("access_valid_ghost3", () => {
       .should("have.value", "new-tag-with-kraken");
     cy.wait(1000);
   });
+
+  Cypress.Commands.add("input_slug_tag_ghost3_with", (slug) => {
+    cy.log("And I fill on element having id tag-slug with "+slug);
+    cy.get('input[id="tag-slug"]')
+      .clear()
+      .should("be.visible")
+      .type(slug, { force: true })
+      .should("have.value", slug);
+    cy.wait(1000);
+  });
+  
+
   Cypress.Commands.add("input_password_tag_ghost3", () => {
     cy.log("And I fill on element having id user-password-new with shortpwd");
     cy.get('#tag-description')
@@ -385,19 +407,46 @@ Cypress.Commands.add("access_valid_ghost3", () => {
     cy.wait(1000);
   });
 
+  Cypress.Commands.add("input_description_tag_ghost3_with", (description) => {
+    cy.log("And I fill on element having id tag-description:"+description);
+    cy.get('#tag-description')
+      .clear()
+      .should("be.visible")
+      .type(
+        description,
+        { force: true }
+      )
+      .should(
+        "have.value",
+        description
+      );
+    cy.wait(1000);
+  });
+
   Cypress.Commands.add("navigate_new_tag_ghost3", () => {
     cy.log("And I navigate to new tag created");
     cy.visit(Cypress.env('baseUrl_ghost3')+"/ghost/#/tags/new-tag-with-kraken"); 
     cy.wait(1000);
   });
 
+  Cypress.Commands.add("navigate_new_tag_ghost3_with", (url_new_tag) => {
+    cy.log("And I navigate to new tag created with slug: "+url_new_tag);
+    cy.visit(Cypress.env('baseUrl_ghost3')+"/ghost/#/tags/"+url_new_tag); 
+    cy.wait(1000);
+  });
+
   Cypress.Commands.add("validate_new_tag_ghost3", () => {
     cy.log("Then Validate value text having id tag-name equals to New Tag Test with Kraken");
-    cy.get('input[id="tag-name"]').should("have.value", "New Tag Test with Kraken");
-     
-
+    cy.get('input[id="tag-name"]').should("have.value", "New Tag Test with Kraken");     
     cy.wait(2000);
   });
+
+  Cypress.Commands.add("validate_new_tag_ghost3_with_name", (name) => {
+    cy.log("Then Validate value text having id tag-name equals to: "+name);
+    cy.get('input[id="tag-name"]').should("have.value", name);     
+    cy.wait(2000);
+  });
+  
 
   Cypress.Commands.add("validate_modificate_color_tag_ghost3", () => {
     cy.log("Then Validate value text having name accent-color equals to0FE3F1");
