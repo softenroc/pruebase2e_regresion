@@ -32,6 +32,33 @@ Cypress.Commands.add("access_valid_ghost3", () => {
   });
 
 
+  Cypress.Commands.add("and_i_click_on_sign_in_button",() => {
+    cy.log("And I click on element having id ember12");
+    cy.get('button[id="ember12"]').click();
+    cy.wait(3000);
+  });
+
+  Cypress.Commands.add("when_i_enter_email_registry",() => {
+    cy.log("When I enter email registry");
+    cy.get('input[id="ember8"]').type(Cypress.env('user'));      
+    cy.wait(2000);
+  });
+
+  Cypress.Commands.add("then_validate_text_main_error", (error_message) =>{
+    cy.log(" Then Validate text main error to login equals to "+error_message);
+    cy.get('p[class="main-error"]').should(($p) => {
+        const message = $p.text();
+        expect(message).contain(error_message);
+    });
+    cy.wait(2000);
+  });
+
+  Cypress.Commands.add("and_i_click_on_forgot_link",() =>{  
+    cy.log("And I click on element having id ember11");
+    cy.get('button[id="ember11"]').click();
+    cy.wait(3000);
+  });
+
   Cypress.Commands.add("navigate_post_ghost3", () => {
     cy.log("And I navigate to page post");
     cy.visit('http://localhost:3001/ghost/#/posts')
