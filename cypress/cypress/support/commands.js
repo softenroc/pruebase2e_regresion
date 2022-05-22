@@ -53,6 +53,15 @@ Cypress.Commands.add("access_valid_ghost3", () => {
     cy.wait(2000);
   });
 
+  Cypress.Commands.add("then_validate_response_error", (error_message) =>{
+    cy.log(" Then Validate text response error to "+error_message);
+    cy.get('p[class="response"]').should(($p) => {
+        const message = $p.text();
+        expect(message).contain(error_message);
+    });
+    cy.wait(2000);
+  });
+
   Cypress.Commands.add("and_i_click_on_forgot_link",() =>{  
     cy.log("And I click on element having id ember11");
     cy.get('button[id="ember11"]').click();
