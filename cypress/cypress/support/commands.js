@@ -475,6 +475,60 @@ Cypress.Commands.add("access_valid_ghost3", () => {
     cy.wait(1000);
   });
 
+  Cypress.Commands.add("input_twitter_title_tags_with", (title) => {
+    cy.log("And I fill the input twitter-title with text :"+title);
+    cy.get('input[name="twitterTitle"]')
+      .clear()
+      .should("be.visible")
+      .type(
+        title,
+        { force: true }
+      )
+      .should(
+        "have.value",
+        title
+      );
+    cy.wait(1000);
+  });
+
+  Cypress.Commands.add("textarea_twitter_description_tags_with", (description) => {
+    cy.log("And I fill the text area twitter-description with text :"+description);
+
+    cy.get('textarea[name="twitterDescription"]')
+    .clear()
+    .should("be.visible")
+    .type(description, { force: true })
+    .should("have.value",description);
+    cy.wait(1000);
+  });
+
+  Cypress.Commands.add("input_facebook_title_tags_with", (title) => {
+    cy.log("And I fill the input facebook-title with text :"+title);
+    cy.get('input[name="ogTitle"]')
+      .clear()
+      .should("be.visible")
+      .type(
+        title,
+        { force: true }
+      )
+      .should(
+        "have.value",
+        title
+      );
+    cy.wait(1000);
+  });
+
+  Cypress.Commands.add("textarea_facebook_description_tags_with", (description) => {
+    cy.log("And I fill the text area facebook-description with text :"+description);
+
+    cy.get('textarea[name="ogDescription"]')
+    .clear()
+    .should("be.visible")
+    .type(description, { force: true })
+    .should("have.value",description);
+    cy.wait(1000);
+  });
+
   Cypress.Commands.add("navigate_new_tag_ghost3", () => {
     cy.log("And I navigate to new tag created");
     cy.visit(Cypress.env('baseUrl_ghost3')+"/ghost/#/tags/new-tag-with-kraken"); 
@@ -595,6 +649,48 @@ Cypress.Commands.add("access_valid_ghost3", () => {
     cy.get('button[class="gh-btn gh-btn-green"]').click();
     cy.wait(1000);
   });
+
+  Cypress.Commands.add("navigate_general_ghost3", () => {
+    cy.log("And I navigate to general");
+    cy.visit(Cypress.env('baseUrl_ghost3')+"/ghost/#/settings/general"); 
+    cy.wait(2000);
+  });
+
+  Cypress.Commands.add("click_expand_title_description", () => {
+    cy.log("Expand");
+    cy.get("button[class='gh-btn']").then($buttons => {
+      $buttons.get(0).click();            
+     cy.wait(1000);
+    });
+  });
+
+  Cypress.Commands.add("click_expand_meta_data", () => {
+    cy.log("Expand");
+    cy.get("button[class='gh-btn']").then($buttons => {
+      $buttons.get(4).click();            
+     cy.wait(1000);
+  });});
+
+  Cypress.Commands.add("click_expand_twitter_card", () => {
+    cy.log("Expand");
+    cy.get("button[class='gh-btn']").then($buttons => {
+      $buttons.get(5).click();            
+     cy.wait(1000);
+  });});
+
+  Cypress.Commands.add("click_expand_publication_lenguage", () => {
+    cy.log("Expand");
+    cy.get("button[class='gh-btn']").then($buttons => {
+      $buttons.get(2).click();            
+     cy.wait(1000);
+  });});
+
+  Cypress.Commands.add("click_expand_social_accounts", () => {
+    cy.log("Expand");
+    cy.get("button[class='gh-btn']").then($buttons => {
+      $buttons.get(7).click();            
+     cy.wait(1000);
+  });});
 
   Cypress.Commands.add("click_new_page_ghost3", () => {
     cy.log("And click en new page");
