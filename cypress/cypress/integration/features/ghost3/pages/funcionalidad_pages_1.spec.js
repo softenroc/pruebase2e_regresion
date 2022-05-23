@@ -7,7 +7,7 @@ describe("Feature: Opcion Pages", () => {
       cy.home_ghost3();
     });
   
-    it("Como owner/staff ingreso a Pages para crear una nueva página", () => {
+    it("Como owner/staff ingreso a Pages para crear una nueva página", () => {     
       cy.access_valid_ghost3();
       cy.wait(3000);
       cy.navigate_pages_ghost3();      
