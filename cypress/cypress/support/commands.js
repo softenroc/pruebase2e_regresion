@@ -674,7 +674,7 @@ Cypress.Commands.add("access_valid_ghost3", () => {
   Cypress.Commands.add("click_expand_twitter_card", () => {
     cy.log("Expand");
     cy.get("button[class='gh-btn']").then($buttons => {
-      $buttons.get(5).click();            
+      $buttons.get(7).click();            
      cy.wait(1000);
   });});
 
@@ -691,6 +691,12 @@ Cypress.Commands.add("access_valid_ghost3", () => {
       $buttons.get(7).click();            
      cy.wait(1000);
   });});
+
+  Cypress.Commands.add("click_private", () => {
+    cy.log("Make this site private");
+    cy.get('span[class="input-toggle-component"]').click();
+    cy.wait(2000);
+  });
 
   Cypress.Commands.add("click_new_page_ghost3", () => {
     cy.log("And click en new page");
