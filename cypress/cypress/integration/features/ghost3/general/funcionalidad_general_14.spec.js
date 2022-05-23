@@ -13,9 +13,8 @@ describe("Feature: General", () => {
     cy.click_expand_twitter_card();
     when_i_enter_a_twitter_title();
     and_i_click_on_save_settings_button();
-    then_validate_retry();
+    then_validate_save();
     cy.close_session_ghost3();
-    cy.click_leave();
     cy.wait(2000);
 });
 
@@ -25,11 +24,9 @@ async function when_i_enter_a_twitter_title(){
         var index = Math.floor(Math.random() * size);
         cy.log("size data pool:" + size);
         cy.log("When I enter a twitter title  " + data[index].title);
-        cy.get('input[id="twitterTitle"]').clear({force: true})
-        cy.get('input[id="twitterTitle"]').type(data[index].title,{force: true});
+        cy.get('textarea[id="twitterDescription"]').type("text").clear({force: true});
         cy.wait(2000);
-
-    });
+      });
 }
 
 async function and_i_click_on_save_settings_button(){
@@ -38,11 +35,11 @@ async function and_i_click_on_save_settings_button(){
     cy.wait(2000);
   };
 
-  async function then_validate_retry() {
-    cy.log(" Then Validate text retry equals to <Retry>");
-    cy.get('button[class="gh-btn gh-btn-blue gh-btn-icon gh-btn-red ember-view"]').should(($p) => {
+  async function then_validate_save() {
+    cy.log(" Then Validate text save equals to <Saved>");
+    cy.get('button[class="gh-btn gh-btn-blue gh-btn-icon gh-btn-green ember-view"]').should(($p) => {
         const message = $p.text();
-        expect(message).contain("Retry");
+        expect(message).contain("Saved");
     });
 
 };
