@@ -650,6 +650,48 @@ Cypress.Commands.add("access_valid_ghost3", () => {
     cy.wait(1000);
   });
 
+  Cypress.Commands.add("navigate_general_ghost3", () => {
+    cy.log("And I navigate to general");
+    cy.visit(Cypress.env('baseUrl_ghost3')+"/ghost/#/settings/general"); 
+    cy.wait(2000);
+  });
+
+  Cypress.Commands.add("click_expand_title_description", () => {
+    cy.log("Expand");
+    cy.get("button[class='gh-btn']").then($buttons => {
+      $buttons.get(0).click();            
+     cy.wait(1000);
+    });
+  });
+
+  Cypress.Commands.add("click_expand_meta_data", () => {
+    cy.log("Expand");
+    cy.get("button[class='gh-btn']").then($buttons => {
+      $buttons.get(4).click();            
+     cy.wait(1000);
+  });});
+
+  Cypress.Commands.add("click_expand_twitter_card", () => {
+    cy.log("Expand");
+    cy.get("button[class='gh-btn']").then($buttons => {
+      $buttons.get(5).click();            
+     cy.wait(1000);
+  });});
+
+  Cypress.Commands.add("click_expand_publication_lenguage", () => {
+    cy.log("Expand");
+    cy.get("button[class='gh-btn']").then($buttons => {
+      $buttons.get(2).click();            
+     cy.wait(1000);
+  });});
+
+  Cypress.Commands.add("click_expand_social_accounts", () => {
+    cy.log("Expand");
+    cy.get("button[class='gh-btn']").then($buttons => {
+      $buttons.get(7).click();            
+     cy.wait(1000);
+  });});
+
   Cypress.Commands.add("click_new_page_ghost3", () => {
     cy.log("And click en new page");
     cy.visit(Cypress.env('baseUrl_ghost3')+"/ghost/#/editor/page");
