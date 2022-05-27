@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "chai": "^4.3.6",
+    "console-menu": "^0.1.0",
+    "kraken-node": "^1.0.24"
+  }
+}
