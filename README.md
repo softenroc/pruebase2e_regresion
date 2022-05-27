@@ -1,6 +1,7 @@
-### Pruebas E2E con Generacion de datos aleatorios + Pruebas E2E con Regresiones usando ResembleJS
+##  ENTREGA FINAL PRUEBAS AUTMATIZADAS - 202212 Equipo24
 
-####   202212 Equipo24
+### Pruebas E2E con Generacion de datos aleatorios 
+### Pruebas E2E con Regresiones usando ResembleJS
 
 ------------
 
