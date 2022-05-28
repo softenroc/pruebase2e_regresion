@@ -1,0 +1,8 @@
+{
+    "url": "http://localhost:3001",
+    "headless": true,
+    "depthLevels": 1,
+    "inputValues": false,
+    "values": {},
+    "browsers": ["chromium", "firefox"]
+}
