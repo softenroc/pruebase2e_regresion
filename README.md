@@ -40,9 +40,72 @@
 
 - Con la herramienta nvm instalamos la version de node 12.22.1 : [instalar nvm](https://heynode.com/tutorial/install-nodejs-locally-nvm/ "instalar nvm")
 
+### Instrucciones generales el lanzamiento y configuración del contenedor de Ghost v3
+
+##### Versión de Ghost : 3.41.1
+
+1. Lanzamos un contenedor con la versión 3.41.1 de Ghost (versión actual que usamos):
+`docker run -d -e url=http://localhost:3001 -p 3001:2368 --name ghost_3.41.1 ghost:3.41.1`
+2. Esto desplegará en la siguiente dirección la versión de Ghost Admin: `http://localhost:3001/ghost`
+3. Al ser el primer ingreso, el sistema nos pedirá crear un usuario nuevo. Los datos para la creación son los siguientes:
+> Site title: equipo24 
+  Full name: equipo24
+  Email address: equipo24@mail.com
+  Password: equipo24equipo24
+
+4. Damos click en Last step y nos saltamos el paso de "invite staff" para la crear la cuenta
+5. Accedemos al link `http://localhost:3001/ghost` : con el usuario `equipo24@mail.com` y la contraseña `equipo24equipo24` para validar la creación del usuario.
+
+#### Para habilitar la opcion de Members
+
+1. Click en la opcion Labs del menu
+2. Click en Members
+3. En la opción Enable members dar click en la opción para habilitar `Members`.
+4. Validar que en el menú aparece la opción de `Members`
+
+-------------
+
+###  Instrucciones para la ejecución de pruebas aleatorios con  monkeys-cypress
+
+1. Ingresar a la carpeta de monkeys-cypress
+2. Ejecutar el comando: `npm install`
+
+#### Pasos para la ejecución de pruebas de monkey test para Ghost Home
+3. Para ejecutar las pruebas de Ghost Home lanzamos el siguiente comando: `cypress run --config-file ./monkey-config-home.json`
+4. Revisamos en la carpeta de `results/home` el video evidencia de las pruebas ejecutadas
+
+
+#### Pasos para la ejecución de pruebas de monkey test para Ghost Admin
+3. Para ejecutar las pruebas de Admin Home lanzamos el siguiente comando: `cypress run --config-file ./monkey-config-admin.json`
+4. Revisamos en la carpeta de `results/admin` el video evidencia de las pruebas ejecutadas
+
+-------------
+
+### Instrucciones para ejecución de pruebas E2E con Generacion de datos aleatorios
+
+####  Pasos Cypress
+1. Ingresar a la carpeta de cypress
+2. Ejecutar el comando: `npm install`
+3. Revisar el archivo `cypress.json` para confirmar las variables de entorno de las pruebas con cypress:
+> baseUrl_ghost3: http://localhost:3001,
+baseUrl_ghost4: http://localhost:3002,
+user : equipo24@mail.com,
+password: equipo24equipo24
+
+#### Para ejecución automática
+1. Ingresar a la carpeta de cypress
+2. Ejecutar el comando:` cypress run --headless`
+
+#### Para ejecución manual via interfáz gráfica
+
+4. Ejecutar el comando  `cypress open`
+5. Ejecutar las pruebas de la carpeta `ghost3_data_random` que contiene 7 subcarpetas con las feature por cada funcionalidad.
+
 -------------
 
 ### Instrucciones para ejecución de pruebas de regresion con dos versiones de Ghost y Resemble
+
+### Instrucciones generales el lanzamiento y configuración del contenedor de Ghost v4
 
 ##### -- Versión de Ghost : 3.41.1
 
@@ -154,46 +217,3 @@ Nota: En Windows se genera un error de un path cuando se trata de correr mas de 
 5. Al finalizar se crea un archivo report.html en la carpeta `./kraken/results/compare_kraken`
 6. Se abre el reporte HTML en el navegador y se analiza la comparacion de cada uno de los steps de los escenarios de prueba ([Funcionalidades regresiones semana 6](https://uniandes-my.sharepoint.com/:x:/g/personal/df_rojasr1_uniandes_edu_co/Eb3LvU9h04pAgHj73KMXFDkBNN6t4TXlJhtaunoX_9zBZA?e=27Kgxk "Funcionalidades regresiones semana 6"))
 
-
--------------
-
-### Instrucciones para ejecución de pruebas E2E con Generacion de datos aleatorios
-
-##### Versión de Ghost : 3.41.1
-
-1. Lanzamos un contenedor con la versión 3.41.1 de Ghost (versión actual que usamos):
-`docker run -d -e url=http://localhost:3001 -p 3001:2368 --name ghost_3.41.1 ghost:3.41.1`
-2. Esto desplegará en la siguiente dirección la versión de Ghost Admin: `http://localhost:3001/ghost`
-3. Al ser el primer ingreso, el sistema nos pedirá crear un usuario nuevo. Los datos para la creación son los siguientes:
-> Site title: equipo24 
-  Full name: equipo24
-  Email address: equipo24@mail.com
-  Password: equipo24equipo24
-
-4. Damos click en Last step y nos saltamos el paso de "invite staff" para la crear la cuenta
-5. Accedemos al link `http://localhost:3001/ghost` : con el usuario `equipo24@mail.com` y la contraseña `equipo24equipo24` para validar la creación del usuario.
-
-#### Para habilitar la opcion de Members
-
-1. Click en la opcion Labs del menu
-2. Click en Members
-3. En la opción Enable members dar click en la opción para habilitar `Members`.
-4. Validar que en el menú aparece la opción de `Members`
-
-####  Pasos Cypress
-1. Ingresar a la carpeta de cypress
-2. Ejecutar el comando: `npm install`
-3. Revisar el archivo `cypress.json` para confirmar las variables de entorno de las pruebas con cypress:
-> baseUrl_ghost3: http://localhost:3001,
-baseUrl_ghost4: http://localhost:3002,
-user : equipo24@mail.com,
-password: equipo24equipo24
-
-#### Para ejecución automática
-1. Ingresar a la carpeta de cypress
-2. Ejecutar el comando:` cypress run --headless`
-
-#### Para ejecución manual via interfáz gráfica
-
-4. Ejecutar el comando  `cypress open`
-5. Ejecutar las pruebas de la carpeta `ghost3_data_random` que contiene 7 subcarpetas con las feature por cada funcionalidad.
